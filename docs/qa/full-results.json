@@ -1,0 +1,735 @@
+{
+  "config": {
+    "argv": [
+      "/Users/hamster1/.nvm/versions/node/v24.19.0/bin/node",
+      "/Users/hamster1/projects/ojatea3d/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/hamster1/projects/ojatea3d/playwright.config.ts",
+    "rootDir": "/Users/hamster1/projects/ojatea3d/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/hamster1/projects/ojatea3d/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/hamster1/projects/ojatea3d/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/hamster1/projects/ojatea3d/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/hamster1/projects/ojatea3d/tests/e2e",
+        "snapshotDir": "/Users/hamster1/projects/ojatea3d/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "on-first-retry",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "phase2c.spec.ts",
+      "file": "phase2c.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "presentation and selectable objects at 1440×900",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2387"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:08.859Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2387"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "layout-1440",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-presentation-and-selectable-objects-at-1440×900-chromium/attachments/layout-1440-2a62a2ca0f4b64dbb1a2f23f6dafc32f5108a914.png"
+                    },
+                    {
+                      "name": "layout-1440-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNjMuOTY0MDM5Nzc2NjQ3OTUsCiAgICAgICAgNjgyLjg3ODExMjEyODMwMgogICAgICBdCiAgICB9LAogICAgImNhZGR5LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjU1LAogICAgICAgIDAuMTQ5OTk5OTk5OTk5OTk5OTcsCiAgICAgICAgLTEKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMzYwLjY4NjA0MTI4ODgyMTQsCiAgICAgICAgNjA0LjU3MTQyNDEwMjIyMDIKICAgICAgXQogICAgfSwKICAgICJzY29vcCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjAyLAogICAgICAgIC0wLjQ4LAogICAgICAgIC0wLjcyCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDQ3My43NTYwOTI4Mjk1MDM3LAogICAgICAgIDc3MC41NDM5MjIzNTIzNTQ5CiAgICAgIF0KICAgIH0sCiAgICAia2V0dGxlIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDUsCiAgICAgICAgMC4wMiwKICAgICAgICAtMi4zNQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA1MjkuMTAwOTAzMDA4MzM2NywKICAgICAgICA1NjIuODQ1NjMyMjE1ODQ5NAogICAgICBdCiAgICB9LAogICAgImt5dXN1IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMCwKICAgICAgICAtMC4yMiwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA3MjAsCiAgICAgICAgNjQyLjk3MDE2Nzc5MzA0MzQKICAgICAgXQogICAgfSwKICAgICJreXVzdS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLjc1OTk5NTg3ODI2Njk3NDEsCiAgICAgICAgLTAuNDY5OTk2MzEyMTMzNjA4NDMsCiAgICAgICAgLTEuNDkwMDAwODY3NzMzMjY4NgogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0wLjE3OTk5OTAyMzgwMDA3MjgyCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgODc4LjAyMTc5MjUzODY2NjIsCiAgICAgICAgNzAzLjI1ODQwODk0MTQ3MjkKICAgICAgXQogICAgfSwKICAgICJjdXAiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAxLjQ1LAogICAgICAgIC0wLjI1LAogICAgICAgIC0wLjg1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDEwNjIuODcyOTk4MzkyMjgzMywKICAgICAgICA3MDYuMDU2NzA2MDIxMTIzMgogICAgICBdCiAgICB9CiAgfSwKICAiY2FtZXJhIjogewogICAgInBvc2l0aW9uIjogWwogICAgICAwLAogICAgICAxLjQ1LAogICAgICAzLjgKICAgIF0sCiAgICAicm90YXRpb24iOiBbCiAgICAgIC0wLjEzLAogICAgICAwLAogICAgICAwCiAgICBdCiAgfSwKICAicmVuZGVyIjogewogICAgImZyYW1lIjogMjczLAogICAgImNhbGxzIjogMSwKICAgICJ0cmlhbmdsZXMiOiAyLAogICAgInBvaW50cyI6IDAsCiAgICAibGluZXMiOiAwCiAgfSwKICAibWVtb3J5IjogewogICAgImdlb21ldHJpZXMiOiA0OSwKICAgICJ0ZXh0dXJlcyI6IDYKICB9LAogICJmcmFtZU1zTWVkaWFuIjogMTA4LjY5OTk5OTk5OTI1NDk0LAogICJmcmFtZU1zUDk1IjogMjgyLjE5OTk5OTk5OTI1NDk0Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-12611ec1a0540497c54b",
+          "file": "phase2c.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "presentation and selectable objects at 1280×720",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2032"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:16.440Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2032"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "layout-1280",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-presentation-and-selectable-objects-at-1280×720-chromium/attachments/layout-1280-cf04b89ea91c2b00a60c97bde556649e9ec79493.png"
+                    },
+                    {
+                      "name": "layout-1280-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNTUuMTcxMjMyMzQwMjkzNTYsCiAgICAgICAgNTQ2LjMwMjQ4MTE5NDQ2NjQKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM1Mi41NDg4MzMzNzg2OTUyNCwKICAgICAgICA0ODMuNjU3MTMwOTYzNTA2OAogICAgICBdCiAgICB9LAogICAgInNjb29wIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDIsCiAgICAgICAgLTAuNDgsCiAgICAgICAgLTAuNzIKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNDQzLjAwNDg3NDc1NzY2MDA1LAogICAgICAgIDYxNi40MzUxMjkwNzAwMzI1CiAgICAgIF0KICAgIH0sCiAgICAia2V0dGxlIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDUsCiAgICAgICAgMC4wMiwKICAgICAgICAtMi4zNQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA0ODcuMjgwNzIyNTQxNTA3NDMsCiAgICAgICAgNDUwLjI3NjQ5NzUyNDI1MjMKICAgICAgXQogICAgfSwKICAgICJreXVzdSI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDAsCiAgICAgICAgLTAuMjIsCiAgICAgICAgLTEuNjUKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNjQwLAogICAgICAgIDUxNC4zNzYxMjU4MzI2MzQzCiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UtbGlkIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMC43NTk4OTkwODU0OTEwNiwKICAgICAgICAtMC40Njk5MDk3MDgwNzA5NDgzNCwKICAgICAgICAtMS40OTAwMjEyNDUxNTk3NzY3CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTc5OTc2MDk5MTk1MjUxMDQKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA3NjYuNDAxMTI2NzQzMDc5LAogICAgICAgIDU2Mi41OTE2NjM5NzUyNzYzCiAgICAgIF0KICAgIH0sCiAgICAiY3VwIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMS40NSwKICAgICAgICAtMC4yNSwKICAgICAgICAtMC44NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA5MTQuMjk4Mzk4MTY0Mjk0LAogICAgICAgIDU2NC44NDUzNTYyMzc3ODgxCiAgICAgIF0KICAgIH0KICB9LAogICJjYW1lcmEiOiB7CiAgICAicG9zaXRpb24iOiBbCiAgICAgIDAsCiAgICAgIDEuNDUsCiAgICAgIDMuOAogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiAyNzMsCiAgICAiY2FsbHMiOiAxLAogICAgInRyaWFuZ2xlcyI6IDIsCiAgICAicG9pbnRzIjogMCwKICAgICJsaW5lcyI6IDAKICB9LAogICJtZW1vcnkiOiB7CiAgICAiZ2VvbWV0cmllcyI6IDQ5LAogICAgInRleHR1cmVzIjogNgogIH0sCiAgImZyYW1lTXNNZWRpYW4iOiA3OS4zMDAwMDAwMDA3NDUwNiwKICAiZnJhbWVNc1A5NSI6IDI0MS41OTk5OTk5OTc3NjQ4Mwp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-59fea64a46ac87603db9",
+          "file": "phase2c.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "presentation and selectable objects at 1024×768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2092"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:22.063Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2092"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "layout-1024",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-presentation-and-selectable-objects-at-1024×768-chromium/attachments/layout-1024-574c9432509a6d18f24112cbd667994b2ad062d3.png"
+                    },
+                    {
+                      "name": "layout-1024-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAyMDguMTgyNjQ3NDc3NzM3MzYsCiAgICAgICAgNTgyLjcyMjY1MjM3NjY5MzUKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDIwNS4zODU0MjIwMzQ4ODAxNSwKICAgICAgICA1MTUuOTAwOTQ1MzM0ODk3OAogICAgICBdCiAgICB9LAogICAgInNjb29wIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDIsCiAgICAgICAgLTAuNDgsCiAgICAgICAgLTAuNzIKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMzAxLjg3MTg2NjA3MzE1ODEsCiAgICAgICAgNjU3LjUzMDgxMDMxNjU0ODkKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM0OS4wOTk0MzcyODYxNzYyLAogICAgICAgIDQ4MC4yOTQ5MzYyODU2Njc0CiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDUxMiwKICAgICAgICA1NDguNjY3ODczMjUxOTQxNQogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDAuNzU5ODQwMzM1NjYzODg3NiwKICAgICAgICAtMC40Njk4NTcxNDI0MzYxMTAwNCwKICAgICAgICAtMS40OTAwMzM2MTM1NDQ0NDQ1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTc5OTYyMTg0NzYyNDk5NzMKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA2NDYuODE3MzExMDY5MTY2OSwKICAgICAgICA2MDAuMDg4MDMzOTQ5MTgxMgogICAgICBdCiAgICB9LAogICAgImN1cCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDEuNDUsCiAgICAgICAgLTAuMjUsCiAgICAgICAgLTAuODUKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgODA0LjU4NDk1ODQxNDU0MzMsCiAgICAgICAgNjAyLjUwMTcxOTEzNzY3MDEKICAgICAgXQogICAgfQogIH0sCiAgImNhbWVyYSI6IHsKICAgICJwb3NpdGlvbiI6IFsKICAgICAgMCwKICAgICAgMS40NSwKICAgICAgMy44CiAgICBdLAogICAgInJvdGF0aW9uIjogWwogICAgICAtMC4xMywKICAgICAgMCwKICAgICAgMAogICAgXQogIH0sCiAgInJlbmRlciI6IHsKICAgICJmcmFtZSI6IDI2NywKICAgICJjYWxscyI6IDEsCiAgICAidHJpYW5nbGVzIjogMiwKICAgICJwb2ludHMiOiAwLAogICAgImxpbmVzIjogMAogIH0sCiAgIm1lbW9yeSI6IHsKICAgICJnZW9tZXRyaWVzIjogNDksCiAgICAidGV4dHVyZXMiOiA2CiAgfSwKICAiZnJhbWVNc01lZGlhbiI6IDc4LjUsCiAgImZyYW1lTXNQOTUiOiAzMDkuMDk5OTk5OTk3NzY0OAp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-cb377623a0a3a60a206a",
+          "file": "phase2c.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "presentation and selectable objects at 768×1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "1997"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4833,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:27.711Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "1997"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "layout-768",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-presentation-and-selectable-objects-at-768×1024-chromium/attachments/layout-768-02ebef44c7b6867fe97571037a7f7d4fc51c4d0a.png"
+                    },
+                    {
+                      "name": "layout-768-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxNTQuMjg4MzkzNjQ5MjYzNjQsCiAgICAgICAgNTc4LjM3NTU1ODUxMDkwMTMKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDE1Mi45MzczMDY3MTM1MDk4LAogICAgICAgIDUyNy4wMzA3NzU3MzE1NTY3CiAgICAgIF0KICAgIH0sCiAgICAic2Nvb3AiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wMiwKICAgICAgICAtMC40OCwKICAgICAgICAtMC43MgogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAyMjcuOTgyNDMxNzQyOTc3ODQsCiAgICAgICAgNjI4LjUyNTI1OTg3Nzc5NTIKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDI1MC44NjY2MjQzNzc4NTQxMiwKICAgICAgICA1MTguOTM4NzU4MDU0MTE0OAogICAgICBdCiAgICB9LAogICAgImt5dXN1IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMCwKICAgICAgICAtMC4yMiwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzODQsCiAgICAgICAgNTY0LjQ1MjQ5MTQyOTA5ODYKICAgICAgXQogICAgfSwKICAgICJreXVzdS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLjc1ODk4Njk5Nzc2MzI4NTYsCiAgICAgICAgLTAuNDY5MDkzNjI5NTc3Njc2NTMsCiAgICAgICAgLTEuNDkwMjEzMjYzNjI4NzgyCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTc5NzYwMDc4NDE3NjIwMwogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDQ4OS40MDU5MDMzNDA3MTk0LAogICAgICAgIDYwMi40Mjk3NDQ2ODE3MDczCiAgICAgIF0KICAgIH0sCiAgICAiY3VwIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMS40NSwKICAgICAgICAtMC4yNSwKICAgICAgICAtMC44NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA2MDIuOTA0NTk2Nzc4MDM4MiwKICAgICAgICA1OTAuMDM1NDc1MjkxNTU4NAogICAgICBdCiAgICB9CiAgfSwKICAiY2FtZXJhIjogewogICAgInBvc2l0aW9uIjogWwogICAgICAwLAogICAgICAxLjI1MDAwMDAwMDAwMDA2MDQsCiAgICAgIDYuNjM1OTk2NjAxMTI3MzcyCiAgICBdLAogICAgInJvdGF0aW9uIjogWwogICAgICAtMC4xMzAwMDAyODQyNTg2MDY5NiwKICAgICAgMCwKICAgICAgMAogICAgXQogIH0sCiAgInJlbmRlciI6IHsKICAgICJmcmFtZSI6IDI2MCwKICAgICJjYWxscyI6IDEsCiAgICAidHJpYW5nbGVzIjogMiwKICAgICJwb2ludHMiOiAwLAogICAgImxpbmVzIjogMAogIH0sCiAgIm1lbW9yeSI6IHsKICAgICJnZW9tZXRyaWVzIjogNDksCiAgICAidGV4dHVyZXMiOiA2CiAgfSwKICAiZnJhbWVNc01lZGlhbiI6IDYyLjE5OTk5OTk5OTI1NDk0LAogICJmcmFtZU1zUDk1IjogMjIxLjEwMDAwMDAwMTQ5MDEyCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-2343784a0d0b7ebcdfcc",
+          "file": "phase2c.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "presentation and selectable objects at 390×844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2004"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3346,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:32.549Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2004"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "layout-390",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-presentation-and-selectable-objects-at-390×844-chromium/attachments/layout-390-15a4423342b1f78f0fc663e567df5ee5c53b2884.png"
+                    },
+                    {
+                      "name": "layout-390-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA3OC45Nzc3MzYzMzI0NjEwOSwKICAgICAgICA0MDcuMzU2MDcyNjkzMTU1NTcKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDc4LjU1OTg3OTIwNTU2Nzg0LAogICAgICAgIDM4MS4yMzI5Mzk4MjEyMDc1CiAgICAgIF0KICAgIH0sCiAgICAic2Nvb3AiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wMiwKICAgICAgICAtMC40OCwKICAgICAgICAtMC43MgogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxMTcuMTY2NzkzMjA2NjIwNCwKICAgICAgICA0MzEuMDMwNzE3MTAyMjUxOQogICAgICBdCiAgICB9LAogICAgImtldHRsZSI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjA1LAogICAgICAgIDAuMDIsCiAgICAgICAgLTIuMzUKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMTIzLjc3MzExNTM2MzE0MjUxLAogICAgICAgIDM4Mi4wNDIwNzE0Mjk1NDAxNgogICAgICBdCiAgICB9LAogICAgImt5dXN1IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMCwKICAgICAgICAtMC4yMiwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxOTUsCiAgICAgICAgNDAzLjQ3MDU0MDA1MjQwOTUKICAgICAgXQogICAgfSwKICAgICJreXVzdS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLjczNjM2MDUxNDM4MzM5MjUsCiAgICAgICAgLTAuNDQ4ODQ4ODgxMjkwNDAzNywKICAgICAgICAtMS40OTQ5NzY3MzM4MTQwMjI1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTc0NDAxMTc0NDU5MjI0NQogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDI0Ny45MzIxODgwMDA2NjI1LAogICAgICAgIDQyMS4wNTQyOTgwOTY0NTUxCiAgICAgIF0KICAgIH0sCiAgICAiY3VwIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMS40NSwKICAgICAgICAtMC4yNSwKICAgICAgICAtMC44NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzMDQuNzcwMDExMjc3OTE3OCwKICAgICAgICA0MTIuNDE3MTM2MjY5OTI4OQogICAgICBdCiAgICB9CiAgfSwKICAiY2FtZXJhIjogewogICAgInBvc2l0aW9uIjogWwogICAgICAwLAogICAgICAxLjI1MDAwMDAwMDI2NzgzODIsCiAgICAgIDExLjU4MDczMjkzNDQ4ODIzNQogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMwMTU0Nzk5Mjc4NjMxMzYsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiAyNzgsCiAgICAiY2FsbHMiOiAxLAogICAgInRyaWFuZ2xlcyI6IDIsCiAgICAicG9pbnRzIjogMCwKICAgICJsaW5lcyI6IDAKICB9LAogICJtZW1vcnkiOiB7CiAgICAiZ2VvbWV0cmllcyI6IDQ5LAogICAgInRleHR1cmVzIjogNgogIH0sCiAgImZyYW1lTXNNZWRpYW4iOiAyOC42MDAwMDAwMDE0OTAxMTYsCiAgImZyYW1lTXNQOTUiOiAxOTQuMjAwMDAwMDAyOTgwMjMKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-13cf67d6ceee9a293180",
+          "file": "phase2c.spec.ts",
+          "line": 91,
+          "column": 3
+        },
+        {
+          "title": "full ceremony and physical reset: desktop keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2106"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 96916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:05:35.901Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2106"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "complete",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and-physical-reset-desktop-keyboard-chromium/attachments/complete-23e1ae201c0b44190f637f544846f97f44ebdf73.png"
+                    },
+                    {
+                      "name": "complete-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNTUuMTcxMjMzMTI2MjUxMiwKICAgICAgICA1NDYuMzAyNDY4MzA5MzMzCiAgICAgIF0KICAgIH0sCiAgICAiY2FkZHktbGlkIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgMC4xNDk5OTk5OTk5OTk5OTk5NywKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0yLjY1NDAwNjU2MDk5NTMwMzNlLTgxCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMzUyLjU0ODgzMzkwNTE3MjgsCiAgICAgICAgNDgzLjY1NzExODM2NTk3NDUKICAgICAgXQogICAgfSwKICAgICJzY29vcCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjAwOTMwMjkzOTU1NzM2MTIsCiAgICAgICAgLTAuNDcwNzc5MzE1MzA5MjM5NSwKICAgICAgICAtMC43Mjk4MDk2MzA1Nzg3MzI5CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC4wMDI2NTYzNjM2NDU4MDAzNzYKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA0NDUuNDIxNjM1NTQ3MTg0NDUsCiAgICAgICAgNjEzLjk2NTg0Nzc5MTkzMTUKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDQ4Ny4yODA3MjI3NDU3MTE5LAogICAgICAgIDQ1MC4yNzY0ODUwMzI0OTE5CiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDY0MCwKICAgICAgICA1MTQuMzc2MTEzMTA4NTk5MgogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDQuNzMzODAwNDcwMjY2MDQ4ZS01NiwKICAgICAgICAwLjIwOTk5OTk5OTk5OTk5OTk0LAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTEuMTIxMTYzMjY5MjczNTQwN2UtNTYKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA2NDAsCiAgICAgICAgNDQ1Ljg5ODUxMjQ1MTczOTEKICAgICAgXQogICAgfSwKICAgICJjdXAiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAxLjQ1LAogICAgICAgIC0wLjI1LAogICAgICAgIC0wLjg1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDkxNC4yOTgzOTczMzIwNTg4LAogICAgICAgIDU2NC44NDUzNDMyNDUyMjc1CiAgICAgIF0KICAgIH0KICB9LAogICJjYW1lcmEiOiB7CiAgICAicG9zaXRpb24iOiBbCiAgICAgIDAsCiAgICAgIDEuNDUsCiAgICAgIDMuOAogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiAzNTM3LAogICAgImNhbGxzIjogMSwKICAgICJ0cmlhbmdsZXMiOiAyLAogICAgInBvaW50cyI6IDAsCiAgICAibGluZXMiOiAwCiAgfSwKICAibWVtb3J5IjogewogICAgImdlb21ldHJpZXMiOiA2NiwKICAgICJ0ZXh0dXJlcyI6IDYKICB9LAogICJmcmFtZU1zTWVkaWFuIjogODAuNjk5OTk5OTk5MjU0OTQsCiAgImZyYW1lTXNQOTUiOiA5MQp9"
+                    },
+                    {
+                      "name": "repeat-complete",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and-physical-reset-desktop-keyboard-chromium/attachments/repeat-complete-79af37845d1c7b2f1489719e06963a433959cdca.png"
+                    },
+                    {
+                      "name": "repeat-complete-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNTUuMTcxMjMzMTI2MjUxMiwKICAgICAgICA1NDYuMzAyNDY4MzA5MzMzCiAgICAgIF0KICAgIH0sCiAgICAiY2FkZHktbGlkIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgMC4xNDk5OTk5OTk5OTk5OTk5NywKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0xLjcxNzEzMjA3NTE2Mzg5NThlLTgyCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMzUyLjU0ODgzMzkwNTE3MjgsCiAgICAgICAgNDgzLjY1NzExODM2NTk3NDUKICAgICAgXQogICAgfSwKICAgICJzY29vcCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjAwODk5NDEyODc0OTA1MzYsCiAgICAgICAgLTAuNDcwNTI0Njc5NjEzOTE2NTMsCiAgICAgICAgLTAuNzMwMDg5NzE1MDg1MjM2OAogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuMDAyNzMxMzUwODMyMjUxMTg3NwogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDQ0NS40OTEyMTAyNTg4MzA3LAogICAgICAgIDYxMy44OTcwNjYwNTkyOTY5CiAgICAgIF0KICAgIH0sCiAgICAia2V0dGxlIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDUsCiAgICAgICAgMC4wMiwKICAgICAgICAtMi4zNQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA0ODcuMjgwNzIyNzQ1NzExOSwKICAgICAgICA0NTAuMjc2NDg1MDMyNDkxOQogICAgICBdCiAgICB9LAogICAgImt5dXN1IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMCwKICAgICAgICAtMC4yMiwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA2NDAsCiAgICAgICAgNTE0LjM3NjExMzEwODU5OTIKICAgICAgXQogICAgfSwKICAgICJreXVzdS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICA1LjE2NjA3NjI1MjEzNDQ3NGUtNTcsCiAgICAgICAgMC4yMDk5OTk5OTk5OTk5OTk5NCwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0xLjIyMzU0NDM3NTUwNTUzNjFlLTU3CiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNjQwLAogICAgICAgIDQ0NS44OTg1MTI0NTE3MzkxCiAgICAgIF0KICAgIH0sCiAgICAiY3VwIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMS40NSwKICAgICAgICAtMC4yNSwKICAgICAgICAtMC44NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA5MTQuMjk4Mzk3MzMyMDU4OCwKICAgICAgICA1NjQuODQ1MzQzMjQ1MjI3NQogICAgICBdCiAgICB9CiAgfSwKICAiY2FtZXJhIjogewogICAgInBvc2l0aW9uIjogWwogICAgICAwLAogICAgICAxLjQ1LAogICAgICAzLjgKICAgIF0sCiAgICAicm90YXRpb24iOiBbCiAgICAgIC0wLjEzLAogICAgICAwLAogICAgICAwCiAgICBdCiAgfSwKICAicmVuZGVyIjogewogICAgImZyYW1lIjogNzEzMSwKICAgICJjYWxscyI6IDEsCiAgICAidHJpYW5nbGVzIjogMiwKICAgICJwb2ludHMiOiAwLAogICAgImxpbmVzIjogMAogIH0sCiAgIm1lbW9yeSI6IHsKICAgICJnZW9tZXRyaWVzIjogNjYsCiAgICAidGV4dHVyZXMiOiA2CiAgfSwKICAiZnJhbWVNc01lZGlhbiI6IDgwLjUsCiAgImZyYW1lTXNQOTUiOiA4OC40MDAwMDAwMDIyMzUxNwp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-5504f3a8fc2c7345d7b2",
+          "file": "phase2c.spec.ts",
+          "line": 121,
+          "column": 3
+        },
+        {
+          "title": "full ceremony and physical reset: desktop mouse",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2094"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 60229,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:07:12.825Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2094"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "complete",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and-physical-reset-desktop-mouse-chromium/attachments/complete-ade5fc072a72923c40b031ac4f9d75b58e66984a.png"
+                    },
+                    {
+                      "name": "complete-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNjMuOTY0MDQwNzkyNjMwNDQsCiAgICAgICAgNjgyLjg3ODA5NTQ3MjA5ODYKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTIuNzkzNjQzOTA1MzE3NjkyZS05NgogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM2MC42ODYwNDE5NjkzODIzNiwKICAgICAgICA2MDQuNTcxNDA3ODE3Nzg5OAogICAgICBdCiAgICB9LAogICAgInNjb29wIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDEzMjc2MTE5MjY2MjksCiAgICAgICAgLTAuNDc0MjMyOTQwMjM5NDUzNSwKICAgICAgICAtMC43MjYxNTgwNzExNDA1ODg4CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMC4wMDE2NjQ5NDAxMjAzNjAzMDY3CiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNDc1LjY1NjAzNDU5NDk4NTgsCiAgICAgICAgNzY4LjYwOTg4NTEwOTQwNTQKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDUyOS4xMDA5MDMyNzIzMDUzLAogICAgICAgIDU2Mi44NDU2MTYwNjgxNDY5CiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDcyMCwKICAgICAgICA2NDIuOTcwMTUxMzQ1MDg2NwogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDMuNzAyMzkyNzIwNzE4MzUzZS02NiwKICAgICAgICAwLjIxLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTguNzY4ODI0ODY0ODU5MjYxZS02NwogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDcyMCwKICAgICAgICA1NTcuMzczMTUwMzMzMjY0MwogICAgICBdCiAgICB9LAogICAgImN1cCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDEuNDUsCiAgICAgICAgLTAuMjUsCiAgICAgICAgLTAuODUKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMTA2Mi44NzI5OTczMTY0NzkzLAogICAgICAgIDcwNi4wNTY2ODkyMjYwNTIxCiAgICAgIF0KICAgIH0KICB9LAogICJjYW1lcmEiOiB7CiAgICAicG9zaXRpb24iOiBbCiAgICAgIDAsCiAgICAgIDEuNDUsCiAgICAgIDMuOAogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiAyOTcyLAogICAgImNhbGxzIjogMSwKICAgICJ0cmlhbmdsZXMiOiAyLAogICAgInBvaW50cyI6IDAsCiAgICAibGluZXMiOiAwCiAgfSwKICAibWVtb3J5IjogewogICAgImdlb21ldHJpZXMiOiA2NiwKICAgICJ0ZXh0dXJlcyI6IDYKICB9LAogICJmcmFtZU1zTWVkaWFuIjogMTE0LjE5OTk5OTk5OTI1NDk0LAogICJmcmFtZU1zUDk1IjogMTI3Cn0="
+                    },
+                    {
+                      "name": "reset",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and-physical-reset-desktop-mouse-chromium/attachments/reset-4829578221cf7ce68c79c88ffcaf754a9f47c839.png"
+                    },
+                    {
+                      "name": "reset-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNjMuOTY0MDQwNzkyNjMwNDQsCiAgICAgICAgNjgyLjg3ODA5NTQ3MjA5ODYKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTQuMzA5NjUyODcyNjYyMDQ1ZS0xMDIKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzNjAuNjg2MDQxOTY5MzgyMzYsCiAgICAgICAgNjA0LjU3MTQwNzgxNzc4OTgKICAgICAgXQogICAgfSwKICAgICJzY29vcCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjAxMzI3NjExOTI2NjI5LAogICAgICAgIC0wLjQ3NDIzMjk0MDIzOTQ1MzUsCiAgICAgICAgLTAuNzI2MTU4MDcxMTQwNTg4OAogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuMDAxNjY0OTQwMTIwMzYwMzA2NwogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDQ3NS42NTYwMzQ1OTQ5ODU4LAogICAgICAgIDc2OC42MDk4ODUxMDk0MDU0CiAgICAgIF0KICAgIH0sCiAgICAia2V0dGxlIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDUsCiAgICAgICAgMC4wMiwKICAgICAgICAtMi4zNQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA1MjkuMTAwOTAzMjcyMzA1MywKICAgICAgICA1NjIuODQ1NjE2MDY4MTQ2OQogICAgICBdCiAgICB9LAogICAgImt5dXN1IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgMCwKICAgICAgICAtMC4yMiwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA3MjAsCiAgICAgICAgNjQyLjk3MDE1MTM0NTA4NjcKICAgICAgXQogICAgfSwKICAgICJreXVzdS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLjc1OTA0Nzg5NjUzMzQzMTEsCiAgICAgICAgLTAuNDY5MTQ4MTE3OTUwOTY0NTYsCiAgICAgICAgLTEuNDkwMjAwNDQyODM1MDY3CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTAuMTc5Nzc0NTAxODEwNTQ5NDQKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICA4NzcuODIyMTU3NDI2NTkxMywKICAgICAgICA3MDMuMDc0MDkwMDgzMjIwNQogICAgICBdCiAgICB9LAogICAgImN1cCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDEuNDUsCiAgICAgICAgLTAuMjUsCiAgICAgICAgLTAuODUKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMTA2Mi44NzI5OTczMTY0NzkzLAogICAgICAgIDcwNi4wNTY2ODkyMjYwNTIxCiAgICAgIF0KICAgIH0KICB9LAogICJjYW1lcmEiOiB7CiAgICAicG9zaXRpb24iOiBbCiAgICAgIDAsCiAgICAgIDEuNDUsCiAgICAgIDMuOAogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiAzMTE2LAogICAgImNhbGxzIjogMSwKICAgICJ0cmlhbmdsZXMiOiAyLAogICAgInBvaW50cyI6IDAsCiAgICAibGluZXMiOiAwCiAgfSwKICAibWVtb3J5IjogewogICAgImdlb21ldHJpZXMiOiA1NiwKICAgICJ0ZXh0dXJlcyI6IDYKICB9LAogICJmcmFtZU1zTWVkaWFuIjogMTEyLjY5OTk5OTk5OTI1NDk0LAogICJmcmFtZU1zUDk1IjogMTI3LjMwMDAwMDAwMDc0NTA3Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-32a80eb50dcb41b9faa4",
+          "file": "phase2c.spec.ts",
+          "line": 121,
+          "column": 3
+        },
+        {
+          "title": "full ceremony and physical reset: portrait keyboard with reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2443"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39430,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:08:13.064Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2443"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "complete",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and--7fc15-eyboard-with-reduced-motion-chromium/attachments/complete-5a1c59f5cf1c7ba89ca8e68025f1a2658c4bafdf.png"
+                    },
+                    {
+                      "name": "complete-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxNTQuMjg4Mzg3MjUzODAzMzYsCiAgICAgICAgNTc4LjM3NjExNTA1NTI3MwogICAgICBdCiAgICB9LAogICAgImNhZGR5LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjU1LAogICAgICAgIDAuMTQ5OTk5OTk5OTk5OTk5OTcsCiAgICAgICAgLTEKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAtMy43NjMwNjk1MjEzNzIxNzVlLTE4NAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDE1Mi45MzczMDUyNTY3NDkxLAogICAgICAgIDUyNy4wMzEzMzA1MjI3MDYxCiAgICAgIF0KICAgIH0sCiAgICAic2Nvb3AiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wMTIyMjA0OTg0MzkyMjE0LAogICAgICAgIC0wLjQ3MzM2OTYwMTEyOTEyNjk2LAogICAgICAgIC0wLjcyNzExMzE4NjUxOTc0MDkKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLjAwMTkxOTM0OTkwNzYzNTQ3MgogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDIyOS4yOTk4MDk0MTgwNjYsCiAgICAgICAgNjI3LjI4NDE4NDU0NTc0MjUKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDI1MC44NjY2MjM5OTAzNzg2LAogICAgICAgIDUxOC45MzkzMTI3NzA3MDEzCiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM4NCwKICAgICAgICA1NjQuNDUzMDQ3Mjc5NTExNwogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDQuMjQxNDQyODE2ODcyMDk2ZS0xNjUsCiAgICAgICAgMC4yMSwKICAgICAgICAtMS42NQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0xLjAwNDU1MjI0NjEwMTI4NTRlLTE2NQogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM4NCwKICAgICAgICA1MDYuMDg5MTM4OTI1Mjc4NzUKICAgICAgXQogICAgfSwKICAgICJjdXAiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAxLjQ1LAogICAgICAgIC0wLjI1LAogICAgICAgIC0wLjg1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDYwMi45MDQ2MDM5NDMyMjksCiAgICAgICAgNTkwLjAzNjAzMjU0MjIxMDYKICAgICAgXQogICAgfQogIH0sCiAgImNhbWVyYSI6IHsKICAgICJwb3NpdGlvbiI6IFsKICAgICAgMCwKICAgICAgMS4yNSwKICAgICAgNi42MzU5OTY2MDExMjgyMjkKICAgIF0sCiAgICAicm90YXRpb24iOiBbCiAgICAgIC0wLjEzLAogICAgICAwLAogICAgICAwCiAgICBdCiAgfSwKICAicmVuZGVyIjogewogICAgImZyYW1lIjogMzM4NywKICAgICJjYWxscyI6IDEsCiAgICAidHJpYW5nbGVzIjogMiwKICAgICJwb2ludHMiOiAwLAogICAgImxpbmVzIjogMAogIH0sCiAgIm1lbW9yeSI6IHsKICAgICJnZW9tZXRyaWVzIjogNjAsCiAgICAidGV4dHVyZXMiOiA2CiAgfSwKICAiZnJhbWVNc01lZGlhbiI6IDYzLjE5OTk5OTk5OTI1NDkzNSwKICAiZnJhbWVNc1A5NSI6IDcwLjM5OTk5OTk5ODUwOTg4Cn0="
+                    },
+                    {
+                      "name": "reset",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-full-ceremony-and--7fc15-eyboard-with-reduced-motion-chromium/attachments/reset-93c74ba183d4c97e3a054a61ef9a6bbdaeefbc45.png"
+                    },
+                    {
+                      "name": "reset-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxNTQuMjg4Mzg3MjUzODAzMzYsCiAgICAgICAgNTc4LjM3NjExNTA1NTI3MwogICAgICBdCiAgICB9LAogICAgImNhZGR5LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIC0xLjU1LAogICAgICAgIDAuMTQ5OTk5OTk5OTk5OTk5OTcsCiAgICAgICAgLTEKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAtMy44Mjg2MDYyMTA5NjIwODZlLTE5MwogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDE1Mi45MzczMDUyNTY3NDkxLAogICAgICAgIDUyNy4wMzEzMzA1MjI3MDYxCiAgICAgIF0KICAgIH0sCiAgICAic2Nvb3AiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wMTIyMjA0OTg0MzkyMjE0LAogICAgICAgIC0wLjQ3MzM2OTYwMTEyOTEyNjk2LAogICAgICAgIC0wLjcyNzExMzE4NjUxOTc0MDkKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLjAwMTkxOTM0OTkwNzYzNTQ3MgogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDIyOS4yOTk4MDk0MTgwNjYsCiAgICAgICAgNjI3LjI4NDE4NDU0NTc0MjUKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDI1MC44NjY2MjM5OTAzNzg2LAogICAgICAgIDUxOC45MzkzMTI3NzA3MDEzCiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM4NCwKICAgICAgICA1NjQuNDUzMDQ3Mjc5NTExNwogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDAuNzU5OTk4MjkwMDMzNjE1MywKICAgICAgICAtMC40Njk5OTg0NzAwMzAwNzY4LAogICAgICAgIC0xLjQ5MDAwMDM1OTk5MjkyMwogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIC0wLjE3OTk5OTU5NTAwNzk2MTQ4CiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNDg5LjU0NzU0ODQwNjg5NTMsCiAgICAgICAgNjAyLjU1OTc2Mjk2NTUyMjMKICAgICAgXQogICAgfSwKICAgICJjdXAiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAxLjQ1LAogICAgICAgIC0wLjI1LAogICAgICAgIC0wLjg1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDYwMi45MDQ2MDM5NDMyMjksCiAgICAgICAgNTkwLjAzNjAzMjU0MjIxMDYKICAgICAgXQogICAgfQogIH0sCiAgImNhbWVyYSI6IHsKICAgICJwb3NpdGlvbiI6IFsKICAgICAgMCwKICAgICAgMS4yNSwKICAgICAgNi42MzU5OTY2MDExMjgyMjkKICAgIF0sCiAgICAicm90YXRpb24iOiBbCiAgICAgIC0wLjEzLAogICAgICAwLAogICAgICAwCiAgICBdCiAgfSwKICAicmVuZGVyIjogewogICAgImZyYW1lIjogMzUzMSwKICAgICJjYWxscyI6IDEsCiAgICAidHJpYW5nbGVzIjogMiwKICAgICJwb2ludHMiOiAwLAogICAgImxpbmVzIjogMAogIH0sCiAgIm1lbW9yeSI6IHsKICAgICJnZW9tZXRyaWVzIjogNTAsCiAgICAidGV4dHVyZXMiOiA2CiAgfSwKICAiZnJhbWVNc01lZGlhbiI6IDYzLjE5OTk5OTk5OTI1NDkzNSwKICAiZnJhbWVNc1A5NSI6IDcwLjM5OTk5OTk5ODUwOTg4Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-8f36fa7c052ccbe852b7",
+          "file": "phase2c.spec.ts",
+          "line": 121,
+          "column": 3
+        },
+        {
+          "title": "interruptions, mixed input, focus loss, and resize recover without skipping steps",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "scene-ready-ms",
+                  "description": "2098"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 63114,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:08:52.503Z",
+                  "annotations": [
+                    {
+                      "type": "scene-ready-ms",
+                      "description": "2098"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "portrait-sip",
+                      "contentType": "image/png",
+                      "path": "/Users/hamster1/projects/ojatea3d/test-results/phase2c-interruptions-mixe-27623-over-without-skipping-steps-chromium/attachments/portrait-sip-f78e04c325548225dfcc45607ad555253ba476ba.png"
+                    },
+                    {
+                      "name": "portrait-sip-metrics",
+                      "contentType": "application/json",
+                      "body": "ewogICJvYmplY3RzIjogewogICAgImNhZGR5IjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuNTUsCiAgICAgICAgLTAuMiwKICAgICAgICAtMQogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxNTQuMjg4MjY3OTA1NTA0NDMsCiAgICAgICAgNTc4LjM3NjI0MTk3MzYzNjUKICAgICAgXQogICAgfSwKICAgICJjYWRkeS1saWQiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS41NSwKICAgICAgICAwLjE0OTk5OTk5OTk5OTk5OTk3LAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTEuMTYyNDM1MDUzNDYxOTQ3OWUtOTgKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAxNTIuOTM3MTg0MjM1NzM5MiwKICAgICAgICA1MjcuMDMxNDMxNTQzNTI2MwogICAgICBdCiAgICB9LAogICAgInNjb29wIjogewogICAgICAid29ybGQiOiBbCiAgICAgICAgLTEuMDA5NDcwNTk4NDE4MzA4LAogICAgICAgIC0wLjQ3MDkwMDkxMjc0ODE3NTg2LAogICAgICAgIC0wLjcyOTY2MjEyNTUwMjA1MwogICAgICBdLAogICAgICAicm90YXRpb24iOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuMDAyNjE4MjczOTUxOTMzODUyCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgMjI5Ljc2NTI0ODM3Njc3NTYsCiAgICAgICAgNjI2LjgyNjA0MzUxMjg4NTIKICAgICAgXQogICAgfSwKICAgICJrZXR0bGUiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAtMS4wNSwKICAgICAgICAwLjAyLAogICAgICAgIC0yLjM1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDI1MC44NjY1NjQ2NjQ1OTE2LAogICAgICAgIDUxOC45MzkzOTA3MTQzODI0CiAgICAgIF0KICAgIH0sCiAgICAia3l1c3UiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLAogICAgICAgIC0wLjIyLAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAic2NyZWVuIjogWwogICAgICAgIDM4NCwKICAgICAgICA1NjQuNDUzMTU1NTA3Nzk5OQogICAgICBdCiAgICB9LAogICAgImt5dXN1LWxpZCI6IHsKICAgICAgIndvcmxkIjogWwogICAgICAgIDguMDgwMTM5MjQ2OTkyMDI1ZS02NCwKICAgICAgICAwLjIwOTk5OTk5OTk5OTk5OTk0LAogICAgICAgIC0xLjY1CiAgICAgIF0sCiAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgLTEuOTEzNzE3MTkwMDc3MDU2N2UtNjQKICAgICAgXSwKICAgICAgInNjcmVlbiI6IFsKICAgICAgICAzODQsCiAgICAgICAgNTA2LjA4OTIxOTg3NjIzMzgKICAgICAgXQogICAgfSwKICAgICJjdXAiOiB7CiAgICAgICJ3b3JsZCI6IFsKICAgICAgICAwLjEyMDM1NjcxNTg0MDYyNTc4LAogICAgICAgIDAuNzA4Mjg2MzkxNDY4NjY4MSwKICAgICAgICAzLjg4MTY4MzkyOTgwOTk1NjQKICAgICAgXSwKICAgICAgInJvdGF0aW9uIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJzY3JlZW4iOiBbCiAgICAgICAgNDMzLjQwODE2OTc4NzgyMzcsCiAgICAgICAgNTg1LjkyOTY5MzE3OTcyOTUKICAgICAgXQogICAgfQogIH0sCiAgImNhbWVyYSI6IHsKICAgICJwb3NpdGlvbiI6IFsKICAgICAgMCwKICAgICAgMS4yNTAwMDAyOTAyMTY3MTEzLAogICAgICA2LjYzNTk5MjQ4NTg2MDE5NQogICAgXSwKICAgICJyb3RhdGlvbiI6IFsKICAgICAgLTAuMTMsCiAgICAgIDAsCiAgICAgIDAKICAgIF0KICB9LAogICJyZW5kZXIiOiB7CiAgICAiZnJhbWUiOiA0NTIwLAogICAgImNhbGxzIjogMSwKICAgICJ0cmlhbmdsZXMiOiAyLAogICAgInBvaW50cyI6IDAsCiAgICAibGluZXMiOiAwCiAgfSwKICAibWVtb3J5IjogewogICAgImdlb21ldHJpZXMiOiA2NiwKICAgICJ0ZXh0dXJlcyI6IDYKICB9LAogICJmcmFtZU1zTWVkaWFuIjogNjIuMTAwMDAwMDAxNDkwMTE2LAogICJmcmFtZU1zUDk1IjogNjYuMTAwMDAwMDAxNDkwMTIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8fdb2941673334a568cb-16adaa57b459e8900811",
+          "file": "phase2c.spec.ts",
+          "line": 154,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ritual.spec.ts",
+      "file": "ritual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "welcomes the visitor and enters the tea room",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2255,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:09:55.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e93411720f37852b59c5-26416304c3861ed6fc31",
+          "file": "ritual.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "opens the caddy and animates two scoops with the keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13095,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T02:09:57.894Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e93411720f37852b59c5-30866809ba0fe0ca9c5c",
+          "file": "ritual.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-17T02:05:08.631Z",
+    "duration": 302393.911,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
