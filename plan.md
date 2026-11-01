@@ -1,6 +1,6 @@
 # OjaTea — Visual identity plan
 
-Updated: 25 October 2026. Status: proposed direction, ready for visual exploration.
+Updated: 1 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; implementation pending.
 
 ## Phase 1 — Define the visual direction and palette
 
@@ -121,6 +121,131 @@ Completion checklist:
 - [ ] Entry, active ritual, and completion share a consistent visual language.
 - [ ] Asset brief identifies separate lids, open interiors, and movement clearance needs.
 - [ ] The chosen direction and remaining questions are recorded before full asset production.
+
+## Phase 2 — Separate geometry from interaction behaviour
+
+This stage corresponds to step 3.2 of the broader visual identity roadmap. Its outcome is the existing procedural scene organised so a model can later be replaced without rewriting input, movement, or ceremony rules. Preserve the current appearance during this refactor; the Phase 1 palette remains a proposal for later visual work.
+
+### 2.1 — Record the baseline and ownership boundaries
+
+Start with the outstanding focused browser checks listed in [the Phase 2C QA report](docs/phase-2c-qa.md), then record the current scene at entry, leaf transfer, both pours, sipping, and completion. Use existing tests and diagnostics as the behavioural reference.
+
+Assign each responsibility a single owner:
+
+| Layer | Owns | Boundary |
+| --- | --- | --- |
+| Ritual state | Store actions, step guards, fill/sip/steep progress, recovery and restart | Retain `store.ts` and ritual metadata; models never advance the ceremony |
+| Object behaviour | Pointer/keyboard input, selection, hover state, outer movement refs, lid choreography, progress callbacks | Reads store state and passes explicit visual props; retains current event guards and cleanup |
+| Visual model | Static geometry, materials, shadows, local mesh offsets, hover appearance | Receives props and named part refs; no store imports, input listeners, or ceremony transitions |
+| Runtime effects | Liquid, leaf deposits, steam, pour-stream rendering | Receives presentation values and attachment transforms; never independently decides whether transfer is allowed |
+| Scene composition | Room/table placement, lights, camera, atmosphere, lifecycle and diagnostics | Composes independent modules without hiding object behaviour inside furniture geometry |
+
+Deliverable: baseline evidence and an agreed ownership map. Keep existing object names and telemetry meanings intact so tests continue to observe the same objects.
+
+### 2.2 — Establish a small module structure
+
+Use the following target layout, adding files only as their contents are extracted:
+
+```text
+src/
+  scene/
+    Scene.tsx                 # composition and scene-ready lifecycle
+    SceneLighting.tsx         # lights, HDR, background and fog
+    SceneAtmosphere.tsx       # decorative particles; reduced-motion handling
+    CameraRig.tsx
+    RecoveryGuard.tsx
+    SteepingSystem.tsx
+    models/
+      RoomModel.tsx
+      TableModel.tsx
+      TrayModel.tsx
+      CupModel.tsx
+      CaddyModel.tsx
+      ScoopModel.tsx
+      KettleModel.tsx
+      KyusuModel.tsx
+    objects/
+      Cup.tsx
+      Caddy.tsx
+      TeaScoop.tsx
+      Kettle.tsx
+      Kyusu.tsx
+    effects/
+      VesselLiquid.tsx
+      TeaLeaves.tsx
+      Steam.tsx
+  components/
+    GuidedPour.tsx            # retain existing shared pour controller
+  sceneLayout.ts             # shared placement and calibration
+```
+
+Keep `App.tsx` responsible for application entry, canvas configuration, and the interface. Moving the interface into its own file is optional housekeeping, not a prerequisite. Do not introduce a generic interaction engine or a new animation library.
+
+Deliverable: modules with explicit imports and no circular dependencies. Dependency direction is scene composition → behaviour wrappers → models/effects; models do not import wrappers or the store.
+
+### 2.3 — Extract the cup as the first complete example
+
+Move the existing cup behaviour intact into `scene/objects/Cup.tsx`. It continues to own the animated root group, camera-relative sip pose, pointer capture, keyboard handlers, hover state, and drink-stage transitions. Extract only the ceramic meshes into `CupModel.tsx`; pass hover appearance as a prop. Render the liquid as a separate visual child driven by the existing fill/drink values.
+
+Use the original root pivot and local coordinates. Do not add a transformed parent or recenter the model: that would change resting height, pour alignment, and sipping. Confirm selection, hold/release, partial-sip cancellation, return, and restart before using this split as the pattern for other objects.
+
+Deliverable: one fully separated procedural cup with unchanged interaction and appearance. Imported cup variants remain the later asset-pipeline milestone.
+
+### 2.4 — Extract the other tea objects incrementally
+
+| Order | Extraction | Specific checks |
+| --- | --- | --- |
+| Caddy | Body/lid visuals into the model; open/close input and lid movement remain in its wrapper | Lid seats correctly, clears scoop entry, and closes at the same ritual point |
+| Scoop | Handle/bowl into the model; carried leaves into an effect; waypoints and deposits remain in the wrapper | Two deposits, safe cancellation lift/clear/return, and unchanged home contact |
+| Kettle | Body/handle/spout into the model; wrapper continues to configure `GuidedPour` | Source spout, ready pose, tilt, stream, and fill progression remain aligned |
+| Kyūsu | Body/handle/spout/lid visuals into the model; liquid/leaves/steam into effects | Lid rests on tray, both receiving and pouring openings align, and steep colour/progress stay unchanged |
+
+The behaviour wrapper owns each moving lid's group/ref and frame updates. Supply the lid geometry as a separate exported part or explicit slot, so geometry can change without taking ownership of its motion. Preserve current lid parenting during this extraction; changing how a detached lid follows its vessel is a separate behavioural change.
+
+Keep `GuidedPour` responsible for vessel input and motion. Its existing children boundary already supports replaceable visuals. Preserve the single `canPour` predicate shared by transfer and stream visibility; do not duplicate pour rules inside a model or effect.
+
+Deliverable: all five objects have separate procedural visuals and behaviour, verified one at a time.
+
+### 2.5 — Separate the room and supporting surfaces
+
+Extract architecture/decoration, table, and tray visuals from the current `Room`/`Table` functions. Move lights, HDR, background/fog, particles, and contact shadows into appropriate scene-level composition modules. Keep contact shadows attached to the configured tray surface.
+
+Compose tea objects and `SteepingSystem` directly in the scene rather than mounting them inside `TableModel`. Preserve the original world transforms when removing nested groups, including any identity groups used by diagnostics. Keep the existing HDR path, lighting values, camera behaviour, and reduced-motion settings.
+
+Deliverable: removing or replacing furniture visuals does not unmount the ritual controllers or change object coordinates.
+
+### 2.6 — Make presentation inputs explicit
+
+Define small, typed props per model/effect rather than passing the store or its action functions. Pass hover appearance, liquid amount/colour, leaf count/visibility, and steam activity only where needed. Models may calculate visual presentation from these props; only behaviour wrappers submit progress or transition actions.
+
+Keep placement and behavioural calibration in `sceneLayout.ts`: resting heights, openings, spout offsets, ready poses, pour angles, lid seating/rest transforms, and scoop clearance points. Move currently embedded values there only where doing so improves the boundary, preserving their exact values. Geometry-specific data such as `kyusuBodyProfile` belongs beside its procedural model; retain explicitly documented matching bounds for layout calculations.
+
+Use stable refs for animated parts and avoid React state updates on every frame. Ensure every transform has one writer: the outer controller moves the object, a lid controller moves its lid group, and visual children remain in local coordinates. Extract shared effect code only when shapes and behaviour genuinely match; separate cup/pot liquid renderers are acceptable.
+
+Keep current mesh-based hit testing during this refactor. Independent interaction proxies, imported-node anchor resolution, loaders, asset manifests, fallback/error handling, and material variant management belong to step 3.3. The separation should make those additions possible without implementing them here.
+
+Deliverable: documented visual props, part refs, and calibration ownership, with no model-to-store dependency.
+
+### 2.7 — Verify and document the result
+
+Run `npm run build` and `npm test`, then the relevant existing browser scenarios while each object is extracted. At the end, run the full Chromium ceremony suite once; repeat only when a subsequent change or failure warrants it. Review matching screenshots for material appearance, shadows, labels, liquids, lid seating, and contact with the tray.
+
+Use existing diagnostics to compare home positions, pour endpoints, and renderer resource counts across restart. Investigate unexpected geometry/material duplication or new frame work. This extraction should not make new performance claims or change the pending representative-hardware profiling requirements.
+
+Completion checklist:
+
+- [ ] Outstanding baseline browser checks have been resolved or any remaining gap is explicitly documented.
+- [ ] `App.tsx` composes the scene without containing tea-object geometry or choreography.
+- [ ] Each model is independent of the ritual store, input listeners, and transition actions.
+- [ ] Behaviour wrappers own moving roots and lid transforms with no competing writers.
+- [ ] Runtime effects receive presentation inputs and share existing transfer validation.
+- [ ] Room, table, and tray visuals are separate from object/controller lifetime.
+- [ ] Mesh coordinates, pivots, calibration values, object names, and telemetry remain compatible.
+- [ ] Mouse/keyboard flow, interruption recovery, reduced motion, portrait framing, and repeat/restart pass.
+- [ ] Build, unit tests, full browser results, and visual comparison are recorded.
+- [ ] `design.md` describes the implemented module structure and replacement boundary.
+
+Suggested implementation commits: cup split; remaining tea-object splits in reviewable increments; environment/composition extraction; final documentation and verification. Keep every commit buildable. This planning update is a documentation-only commit.
 
 ## Next stage
 
