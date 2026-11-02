@@ -1,6 +1,6 @@
 # OjaTea — Visual identity plan
 
-Updated: 1 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; implementation pending.
+Updated: 2 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; initial standalone kyūsu model study created, application integration pending.
 
 ## Phase 1 — Define the visual direction and palette
 
@@ -68,7 +68,7 @@ Deliverable: a palette sheet showing colour roles, material samples, and legible
 
 | Asset | Proposed appearance | Functional visual requirement |
 | --- | --- | --- |
-| Kyūsu | Matte warm clay, subtle surface variation, dark interior | Side handle and spout read clearly; lid is a separate part; opening stays visible during leaf and water transfer |
+| Kyūsu | Reference-led squat body in dark iron-brown clay, recessed lid, short tapered spout, flared side handle wrapped in pale cord | Hollow body and open spout; removable lid with small knob/vent; side handle sits roughly perpendicular to the spout |
 | Cup | Cream ceramic with a softly varied glaze and modest foot | Open interior, readable rim, visible tea surface, convincing close view during sipping |
 | Kettle | Restrained aged copper with a charcoal handle | Clear spout tip and grip; highlights reveal shape without overwhelming the cup and pot |
 | Caddy | Deep moss finish with a simple cream label | Lid/body separation and scoop entry are easy to read |
@@ -76,6 +76,20 @@ Deliverable: a palette sheet showing colour roles, material samples, and legible
 | Table | Medium warm wood, low sheen, broad quiet grain | Supports clear object silhouettes and contact shadows |
 | Tray | Slightly lighter bamboo/wood than the table | Visible usable surface and enough space for detached lids and guided movement |
 | Room | Warm plaster/paper, darker timber framing, one restrained plant | Background depth and atmosphere while preserving clear views of the tea setting |
+
+#### Kyūsu reference study — 2 November 2026
+
+The three supplied photographs establish the kyūsu's specific direction, refining the earlier generic warm-clay proposal:
+
+- A squat, rounded body with a broad shoulder, restrained foot, and circular open interior.
+- Dark iron-brown, unglazed-looking clay with fine mineral speckling and subtle throwing marks.
+- A recessed, gently dished removable lid with a small upright knob, concentric rings near the knob, and a small pressure vent.
+- A short, upward-pointing tapered spout with a visible hollow mouth.
+- A side handle at roughly a right angle to the spout, narrow through the grip and flared at the end, with pale natural-fibre cord around the shaft.
+
+An initial editable Blender study and standalone GLB export now exist. See [the asset notes](assets/kyusu/README.md), [closed-lid preview](assets/kyusu/previews/kyusu-closed.png), and [open-lid preview](assets/kyusu/previews/kyusu-open.png). The study interprets the visible features; dimensions are inferred from photographs. It is not integrated into the ceremony, and its scale, poses, clearance, and runtime optimisation remain to be calibrated.
+
+Reference filenames: `il_1588xN.8076310506_8lxw.webp` (underside/base and handle), `il_1588xN.8124230271_hmw0.webp` (open body and separate lid), and `il_1588xN.8124230291_9s4r.webp` (assembled three-quarter view). The photographs are visual references only and are not bundled into the runtime asset or used as textures.
 
 Use subtle imperfections at the scale visible in normal play. Avoid oversized grain, heavy damage, bright metallic trim, or decorative details that obscure functional parts. Review the cup and kyūsu interiors early because the camera sees inside them.
 
