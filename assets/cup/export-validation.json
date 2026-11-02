@@ -1,0 +1,45 @@
+{
+  "glb_version": 2,
+  "bytes": 2891300,
+  "nodes": [
+    "cup_anchor_base",
+    "cup_anchor_grip",
+    "cup_anchor_liquid_surface",
+    "cup_anchor_opening",
+    "cup_anchor_sip_edge",
+    "cup_body",
+    "cup_root"
+  ],
+  "mesh_count": 1,
+  "material_primitives": 2,
+  "embedded_images": 2,
+  "triangles": 28160,
+  "checks": "Header, named hierarchy, anchors, UVs/normals, embedded maps, mesh count and studio/kyusu exclusion passed.",
+  "blender_roundtrip": {
+    "import": "passed",
+    "mesh_objects": 1,
+    "anchors": 5,
+    "images": [
+      {
+        "name": "cup_oatmeal_basecolor.001",
+        "packed_bytes": 1351646,
+        "pixel_values": 4194304,
+        "size": [
+          2048,
+          512
+        ]
+      },
+      {
+        "name": "cup_oatmeal_normal.001",
+        "packed_bytes": 865058,
+        "pixel_values": 4194304,
+        "size": [
+          2048,
+          512
+        ]
+      }
+    ],
+    "world_base_z_m": -1.827734795109559e-12,
+    "world_height_m": 0.05991042778078701
+  }
+}

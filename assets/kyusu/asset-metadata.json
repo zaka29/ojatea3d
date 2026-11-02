@@ -1,0 +1,136 @@
+{
+  "units": "metres",
+  "body_diameter_approx": 0.136,
+  "body_rim_height": 0.0805,
+  "lid_knob_top_approx": 0.0945,
+  "triangles": 72896,
+  "anchors_blender_z_up": {
+    "anchor_base": [
+      0,
+      0,
+      0
+    ],
+    "anchor_opening": [
+      0,
+      0,
+      0.079
+    ],
+    "anchor_spout_tip": [
+      0.1047406941652298,
+      0.0,
+      0.07484913617372513
+    ],
+    "anchor_grip": [
+      0.0,
+      -0.0897720605134964,
+      0.05081264674663544
+    ],
+    "anchor_lid_seat": [
+      0,
+      0,
+      0.0785
+    ],
+    "anchor_liquid_surface": [
+      0,
+      0,
+      0.05
+    ],
+    "anchor_pour_pivot": [
+      0,
+      0,
+      0.04
+    ]
+  },
+  "anchors_gltf_y_up": {
+    "anchor_base": [
+      0,
+      0,
+      0
+    ],
+    "anchor_opening": [
+      0,
+      0.079,
+      0
+    ],
+    "anchor_spout_tip": [
+      0.1047406941652298,
+      0.07484913617372513,
+      -0.0
+    ],
+    "anchor_grip": [
+      0.0,
+      0.05081264674663544,
+      0.0897720605134964
+    ],
+    "anchor_lid_seat": [
+      0,
+      0.0785,
+      0
+    ],
+    "anchor_liquid_surface": [
+      0,
+      0.05,
+      0
+    ],
+    "anchor_pour_pivot": [
+      0,
+      0.04,
+      0
+    ]
+  },
+  "opening_radius": 0.036,
+  "glb_bytes": 5311244,
+  "status": "Visual study. Needs in-app scale/pose/clearance calibration.",
+  "geometry_checks": {
+    "kyusu_body": {
+      "triangles": 39944,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_side_handle": {
+      "triangles": 7424,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_handle_cord": {
+      "triangles": 9244,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_disc": {
+      "triangles": 10588,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_knob": {
+      "triangles": 2496,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_throwing_ring_00": {
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_throwing_ring_01": {
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_throwing_ring_02": {
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_throwing_ring_03": {
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kyusu_lid_throwing_ring_04": {
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    }
+  }
+}

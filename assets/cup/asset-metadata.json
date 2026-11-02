@@ -1,0 +1,73 @@
+{
+  "units": "metres",
+  "height_m": 0.05991042339155683,
+  "max_diameter_m": 0.07813730090856552,
+  "requested_capacity_ml": 180,
+  "estimated_brim_capacity_ml": 177.64221088861092,
+  "estimated_capacity_at_liquid_anchor_ml": 151.04489681370617,
+  "capacity_method": "600 horizontal ray samples of evaluated inner wall, integrated as circular cross sections; approximate",
+  "material": "oatmeal glazed ceramic with iron-brown rim and exposed clay foot",
+  "geometry_checks": {
+    "triangles": 28160,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "opening_radius_m": 0.032885102908859314,
+  "glb_bytes": 2891300,
+  "anchors_blender_z_up": {
+    "cup_anchor_base": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cup_anchor_opening": [
+      0.0,
+      0.0,
+      0.05972916632890701
+    ],
+    "cup_anchor_liquid_surface": [
+      0.0,
+      0.0,
+      0.05192916840314865
+    ],
+    "cup_anchor_sip_edge": [
+      0.0328851044178009,
+      0.0,
+      0.0596291683614254
+    ],
+    "cup_anchor_grip": [
+      0.0,
+      0.0,
+      0.02992916665971279
+    ]
+  },
+  "anchors_gltf_y_up": {
+    "cup_anchor_base": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "cup_anchor_opening": [
+      0.0,
+      0.05972916632890701,
+      -0.0
+    ],
+    "cup_anchor_liquid_surface": [
+      0.0,
+      0.05192916840314865,
+      -0.0
+    ],
+    "cup_anchor_sip_edge": [
+      0.0328851044178009,
+      0.0596291683614254,
+      -0.0
+    ],
+    "cup_anchor_grip": [
+      0.0,
+      0.02992916665971279,
+      -0.0
+    ]
+  },
+  "status": "Standalone visual study. In-app calibration and integration pending.",
+  "evaluated_base_z_m": 0
+}
