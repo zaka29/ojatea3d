@@ -1,6 +1,6 @@
 {
   "glb_version": 2,
-  "bytes": 2346344,
+  "bytes": 2363008,
   "nodes": [
     "kettle_anchor_base",
     "kettle_anchor_grip",
@@ -30,15 +30,16 @@
   ],
   "mesh_count": 14,
   "embedded_images": 2,
-  "triangles": 44936,
-  "checks": "Header, lid/handle hierarchy, anchors, normals, textured UVs, embedded maps and studio/reference exclusion passed.",
+  "triangles": 44862,
+  "checks": "Header, lid/handle hierarchy, anchors, normals, embedded maps, closed evaluated meshes and studio/reference exclusion passed.",
+  "revision": "Sharper diagonal spout mouth; stream anchor moved to pouring lip.",
   "blender_roundtrip": {
     "import": "passed",
     "mesh_objects": 14,
     "anchors": 8,
     "images": [
       {
-        "name": "kettle_wood_basecolor.004",
+        "name": "kettle_wood_basecolor.005",
         "packed_bytes": 685033,
         "pixel_values": 2097152,
         "size": [
@@ -47,7 +48,7 @@
         ]
       },
       {
-        "name": "kettle_wood_normal.004",
+        "name": "kettle_wood_normal.005",
         "packed_bytes": 391221,
         "pixel_values": 2097152,
         "size": [
@@ -58,9 +59,14 @@
     ],
     "world_base_z_m": 0.0,
     "world_dimensions_xyz_m": [
-      0.22574478387832642,
+      0.22550798952579498,
       0.15988582372665405,
       0.17749999463558197
+    ],
+    "pouring_lip_anchor_blender": [
+      0.14101313054561615,
+      0.0,
+      0.10238957405090332
     ]
   }
 }

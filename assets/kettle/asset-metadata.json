@@ -6,7 +6,7 @@
     "height_with_handle": 0.177
   },
   "measured_dimensions_m": {
-    "overall_width_x": 0.22574478387832642,
+    "overall_width_x": 0.22550798952579498,
     "depth_y": 0.15988582372665405,
     "height_z": 0.17749999463558197
   },
@@ -16,11 +16,11 @@
     0.0
   ],
   "bounds_max_blender": [
-    0.1412447839975357,
+    0.14100798964500427,
     0.07994291186332703,
     0.17749999463558197
   ],
-  "triangles": 44936,
+  "triangles": 44862,
   "mesh_objects": 14,
   "geometry_checks": {
     "kettle_lid_disc": {
@@ -89,12 +89,12 @@
       "nonmanifold_edges": 0
     },
     "kettle_body": {
-      "triangles": 31920,
+      "triangles": 31846,
       "boundary_edges": 0,
       "nonmanifold_edges": 0
     }
   },
-  "glb_bytes": 2346344,
+  "glb_bytes": 2363008,
   "anchors_blender_z_up": {
     "kettle_anchor_base": [
       0.0,
@@ -107,9 +107,9 @@
       0.10700000077486038
     ],
     "kettle_anchor_spout_tip": [
-      0.13699999451637268,
-      0.0,
-      0.11100000143051147
+      0.14101313054561615,
+      -1.745121549866905e-18,
+      0.10238957405090332
     ],
     "kettle_anchor_grip": [
       0.0,
@@ -149,9 +149,9 @@
       -0.0
     ],
     "kettle_anchor_spout_tip": [
-      0.13699999451637268,
-      0.11100000143051147,
-      -0.0
+      0.14101313054561615,
+      0.10238957405090332,
+      1.745121549866905e-18
     ],
     "kettle_anchor_grip": [
       0.0,
@@ -178,6 +178,19 @@
       0.08500000089406967,
       -0.0
     ]
+  },
+  "spout_cut": {
+    "plane_normal_blender": [
+      0.41036465764045715,
+      0.0,
+      0.911921501159668
+    ],
+    "plane_point_blender": [
+      0.14116644859313965,
+      0.0,
+      0.10232055932283401
+    ],
+    "description": "Upper wall cut back to a shallow diagonal mouth; pointed lower pouring lip"
   },
   "materials": "18-8 stainless reference; dark exterior finish inferred from photos; wood grip and knob",
   "status": "Standalone visual study. Runtime integration and calibration pending."

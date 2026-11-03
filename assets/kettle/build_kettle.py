@@ -201,6 +201,25 @@ boolean(body,spout,'UNION','Join open spout shell')
 direction=(centres[2]-centres[0]).normalized()
 cutter=cylinder('_kettle_temporary_bore',.0145,.032,centres[1],axis=direction)
 boolean(body,cutter,'DIFFERENCE','Continuous water passage')
+# Slice the mouth on a shallow, downward-facing plane rather than leaving a
+# square cut normal to the tube. Keep the lower extremity almost unchanged and
+# cut the upper wall back, creating the pointed pouring lip in the annotations.
+spout_cut_normal=Vector((.45,0,1)).normalized()
+old_lower_lip=centres[-1]-normals[-1]*radii[-1]
+spout_cut_plane=old_lower_lip-spout_cut_normal*.0002
+bpy.ops.mesh.primitive_cube_add(size=.8)
+cutter=bpy.context.object; cutter.name='_kettle_temporary_tip_cut'
+for col in list(cutter.users_collection): col.objects.unlink(cutter)
+model.objects.link(cutter)
+cutter.location=spout_cut_plane+spout_cut_normal*.4
+cutter.rotation_mode='QUATERNION'
+cutter.rotation_quaternion=Vector((0,0,1)).rotation_difference(spout_cut_normal)
+cutter.data.materials.append(coat); cutter.data.materials.append(steel)
+for face in cutter.data.polygons: face.material_index=1
+boolean(body,cutter,'DIFFERENCE','Angled spout mouth')
+cut_vertices=[v.co.copy() for v in body.data.vertices
+    if abs(spout_cut_normal.dot(v.co-spout_cut_plane))<1e-6]
+spout_tip=max(cut_vertices,key=lambda p:p.x)
 bevel=body.modifiers.new('Rounded metal seams','BEVEL'); bevel.width=.00025; bevel.segments=2
 bevel.limit_method='ANGLE'; bevel.angle_limit=.7
 
@@ -270,7 +289,7 @@ for child in handle.children: child.location.z-=.002
 
 anchors={
     'kettle_anchor_base':(0,0,0),'kettle_anchor_opening':(0,0,.107),
-    'kettle_anchor_spout_tip':tuple(centres[-1]),'kettle_anchor_grip':(0,0,.1695),
+    'kettle_anchor_spout_tip':tuple(spout_tip),'kettle_anchor_grip':(0,0,.1695),
     'kettle_anchor_handle_pivot':(0,0,.104),'kettle_anchor_lid_seat':(0,0,.106),
     'kettle_anchor_pour_pivot':(0,0,.055),'kettle_anchor_liquid_surface':(0,0,.085),
 }
@@ -354,6 +373,8 @@ metadata={'units':'metres','reference_dimensions_m':{'overall_width':.22,'body_d
     'triangles':sum(v['triangles'] for v in checks.values()),'mesh_objects':len(checks),'geometry_checks':checks,
     'glb_bytes':GLB.stat().st_size,'anchors_blender_z_up':{k:list(v) for k,v in anchors.items()},
     'anchors_gltf_y_up':{k:[v[0],v[2],-v[1]] for k,v in anchors.items()},
+    'spout_cut':{'plane_normal_blender':list(spout_cut_normal),'plane_point_blender':list(spout_cut_plane),
+        'description':'Upper wall cut back to a shallow diagonal mouth; pointed lower pouring lip'},
     'materials':'18-8 stainless reference; dark exterior finish inferred from photos; wood grip and knob',
     'status':'Standalone visual study. Runtime integration and calibration pending.'}
 (OUT/'asset-metadata.json').write_text(json.dumps(metadata,indent=2)+'\n')

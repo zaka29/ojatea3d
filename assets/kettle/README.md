@@ -10,7 +10,7 @@ The model follows the photographed cylindrical body, softened lower edge, slopin
 
 | Measurement | Model |
 | --- | --- |
-| Overall width, including hinges/spout | 225.7 mm |
+| Overall width, including hinges/spout | 225.5 mm |
 | Body depth/diameter | 159.9 mm |
 | Overall height, handle upright | 177.5 mm |
 | Receiving opening, approximate diameter | 97 mm |
@@ -26,6 +26,7 @@ Dimensions are close references rather than a measured manufacturer replica. The
 - `previews/kettle-hero.png`: assembled form, lid, upright handle, and spout.
 - `previews/kettle-open.png`: detached lid, folded-back handle, and stainless interior.
 - `previews/kettle-grip-detail.png`: wood grain, grip halves, rivets, and handle joints.
+- `previews/kettle-spout-detail.png`: revised diagonal mouth and pointed pouring lip, matching the supplied annotations.
 - `previews/kettle-with-teaware.png`: the three asset studies at their shared physical scale.
 - `asset-metadata.json`: measured dimensions, geometry checks, anchors, and export size.
 - `export-validation.json`: GLB structure checks and Blender round-trip import results.
@@ -37,6 +38,8 @@ The studio uses the project's existing `../../public/environment/lebombo_1k.hdr`
 ## Structure and materials
 
 The body is a thin-walled closed shell with a real floor and open cavity. The hollow spout is fused into the body mesh and has a passage through the wall. Exterior and interior surfaces have different materials; the spout mouth has an exposed steel lip. The inner floor includes a shallow formed ring.
+
+The spout tip was revised on 3 November to match the annotated screenshots: a shallow diagonal cut removes more of the upper wall, producing an elongated opening and pointed lower lip. In side view, the cut slopes downward toward the tip at approximately 24 degrees to horizontal. The original reach is preserved within about 0.24 mm. `kettle_anchor_spout_tip` now identifies the pouring lip rather than the old opening centre. The construction script includes this cut, and the source, GLB, metadata, and affected previews have been refreshed.
 
 `kettle_root` is the asset root. `kettle_lid` contains the lid disc and wooden knob. `kettle_handle` contains the steel strap, both grip halves, and both grip rivets. Body-mounted hinge brackets/pins remain outside that moving group.
 
@@ -59,9 +62,9 @@ No liquid, steam, input handling, or ceremony animation is included in the asset
 
 ## Verification and remaining work
 
-All 14 evaluated meshes have zero boundary/non-manifold edges. The GLB has 44,936 triangles, eight semantic anchors, two embedded wood maps, and separate lid/handle hierarchies. Its size is approximately 2.35 MB.
+All 14 evaluated meshes have zero boundary/non-manifold edges. The revised GLB has 44,862 triangles, eight semantic anchors, two embedded wood maps, and separate lid/handle hierarchies. Its size is approximately 2.36 MB.
 
-Structural checks passed for the GLB header, mesh normals, textured UVs, anchors, hierarchy, embedded textures, and exclusion of studio/reference objects. Blender round-trip import recovered all meshes, anchors, and full-resolution packed maps, with matching dimensions and a base at zero. Four previews were rendered and inspected. The construction script also passed a Python syntax check.
+Structural checks passed for the GLB header, mesh normals, textured UVs, anchors, hierarchy, embedded textures, and exclusion of studio/reference objects. Blender round-trip import recovered all meshes, anchors, and full-resolution packed maps, with matching dimensions and a base at zero. Following the tip revision, export/import checks were repeated and confirmed the updated pouring-lip anchor. The revised detail and affected overview previews were rendered and inspected. The construction script also passed a Python syntax check.
 
 These checks cover the standalone model. Application build/ceremony tests were not rerun because runtime code was unchanged. Before integration, calibrate physical-to-scene scale, resting height, tilt/pour pivot, ready pose, stream tip, interaction bounds, and overhead-handle clearance. Validate water pouring, release/cancellation, return, and restart. Mesh/texture optimisation and representative-device profiling remain part of production acceptance.
 

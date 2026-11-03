@@ -110,7 +110,7 @@ Reference filenames: `1451-1_c5212-b-800px.webp` (upright cup and interior), `14
 The third study follows the supplied traditional Japanese kettle photographs and dimensions. This replaces the earlier aged-copper kettle proposal:
 
 - A cylindrical, softly rounded stainless body with a sloping shoulder, circular opening, and charcoal exterior finish interpreted from the photographs.
-- A bright stainless inner wall/floor and thin exposed lip at the short, upward-curving open spout.
+- A bright stainless inner wall/floor and thin exposed lip at the short, upward-curving open spout. The tip now has a shallow diagonal cut and pointed lower pouring lip, following the supplied annotated screenshots; see [the spout detail](assets/kettle/previews/kettle-spout-detail.png).
 - A removable shallow lid with a small pressure vent and tapered wooden knob.
 - An overhead steel bail handle, hinged at opposite sides, with two wooden grip halves and two visible silver rivets. The lid and handle have separate transform groups.
 - Reference dimensions: approximately 22 cm overall width, 16 cm body diameter, and 17.7 cm high with the handle upright. The study measures approximately 22.6 × 16.0 × 17.75 cm, including hinges and spout.
