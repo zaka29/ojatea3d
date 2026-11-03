@@ -1,0 +1,66 @@
+{
+  "glb_version": 2,
+  "bytes": 2346344,
+  "nodes": [
+    "kettle_anchor_base",
+    "kettle_anchor_grip",
+    "kettle_anchor_handle_pivot",
+    "kettle_anchor_lid_seat",
+    "kettle_anchor_liquid_surface",
+    "kettle_anchor_opening",
+    "kettle_anchor_pour_pivot",
+    "kettle_anchor_spout_tip",
+    "kettle_body",
+    "kettle_grip_rivet_0",
+    "kettle_grip_rivet_1",
+    "kettle_handle_strap",
+    "kettle_wood_grip_lower",
+    "kettle_wood_grip_upper",
+    "kettle_handle",
+    "kettle_hinge_bracket_left",
+    "kettle_hinge_bracket_right",
+    "kettle_hinge_cap_left",
+    "kettle_hinge_cap_right",
+    "kettle_hinge_pin_left",
+    "kettle_hinge_pin_right",
+    "kettle_lid_disc",
+    "kettle_wood_knob",
+    "kettle_lid",
+    "kettle_root"
+  ],
+  "mesh_count": 14,
+  "embedded_images": 2,
+  "triangles": 44936,
+  "checks": "Header, lid/handle hierarchy, anchors, normals, textured UVs, embedded maps and studio/reference exclusion passed.",
+  "blender_roundtrip": {
+    "import": "passed",
+    "mesh_objects": 14,
+    "anchors": 8,
+    "images": [
+      {
+        "name": "kettle_wood_basecolor.004",
+        "packed_bytes": 685033,
+        "pixel_values": 2097152,
+        "size": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "kettle_wood_normal.004",
+        "packed_bytes": 391221,
+        "pixel_values": 2097152,
+        "size": [
+          1024,
+          512
+        ]
+      }
+    ],
+    "world_base_z_m": 0.0,
+    "world_dimensions_xyz_m": [
+      0.22574478387832642,
+      0.15988582372665405,
+      0.17749999463558197
+    ]
+  }
+}

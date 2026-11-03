@@ -1,0 +1,184 @@
+{
+  "units": "metres",
+  "reference_dimensions_m": {
+    "overall_width": 0.22,
+    "body_diameter": 0.16,
+    "height_with_handle": 0.177
+  },
+  "measured_dimensions_m": {
+    "overall_width_x": 0.22574478387832642,
+    "depth_y": 0.15988582372665405,
+    "height_z": 0.17749999463558197
+  },
+  "bounds_min_blender": [
+    -0.08449999988079071,
+    -0.07994291186332703,
+    0.0
+  ],
+  "bounds_max_blender": [
+    0.1412447839975357,
+    0.07994291186332703,
+    0.17749999463558197
+  ],
+  "triangles": 44936,
+  "mesh_objects": 14,
+  "geometry_checks": {
+    "kettle_lid_disc": {
+      "triangles": 6756,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_wood_knob": {
+      "triangles": 3328,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_handle_strap": {
+      "triangles": 284,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_wood_grip_upper": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_wood_grip_lower": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_grip_rivet_0": {
+      "triangles": 572,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_grip_rivet_1": {
+      "triangles": 572,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_bracket_left": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_pin_left": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_cap_left": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_bracket_right": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_pin_right": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_hinge_cap_right": {
+      "triangles": 188,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "kettle_body": {
+      "triangles": 31920,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    }
+  },
+  "glb_bytes": 2346344,
+  "anchors_blender_z_up": {
+    "kettle_anchor_base": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "kettle_anchor_opening": [
+      0.0,
+      0.0,
+      0.10700000077486038
+    ],
+    "kettle_anchor_spout_tip": [
+      0.13699999451637268,
+      0.0,
+      0.11100000143051147
+    ],
+    "kettle_anchor_grip": [
+      0.0,
+      0.0,
+      0.16949999332427979
+    ],
+    "kettle_anchor_handle_pivot": [
+      0.0,
+      0.0,
+      0.10400000214576721
+    ],
+    "kettle_anchor_lid_seat": [
+      0.0,
+      0.0,
+      0.10599999874830246
+    ],
+    "kettle_anchor_pour_pivot": [
+      0.0,
+      0.0,
+      0.054999999701976776
+    ],
+    "kettle_anchor_liquid_surface": [
+      0.0,
+      0.0,
+      0.08500000089406967
+    ]
+  },
+  "anchors_gltf_y_up": {
+    "kettle_anchor_base": [
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "kettle_anchor_opening": [
+      0.0,
+      0.10700000077486038,
+      -0.0
+    ],
+    "kettle_anchor_spout_tip": [
+      0.13699999451637268,
+      0.11100000143051147,
+      -0.0
+    ],
+    "kettle_anchor_grip": [
+      0.0,
+      0.16949999332427979,
+      -0.0
+    ],
+    "kettle_anchor_handle_pivot": [
+      0.0,
+      0.10400000214576721,
+      -0.0
+    ],
+    "kettle_anchor_lid_seat": [
+      0.0,
+      0.10599999874830246,
+      -0.0
+    ],
+    "kettle_anchor_pour_pivot": [
+      0.0,
+      0.054999999701976776,
+      -0.0
+    ],
+    "kettle_anchor_liquid_surface": [
+      0.0,
+      0.08500000089406967,
+      -0.0
+    ]
+  },
+  "materials": "18-8 stainless reference; dark exterior finish inferred from photos; wood grip and knob",
+  "status": "Standalone visual study. Runtime integration and calibration pending."
+}

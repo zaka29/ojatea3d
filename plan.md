@@ -1,6 +1,6 @@
 # OjaTea — Visual identity plan
 
-Updated: 2 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; standalone kyūsu and cup model studies created, application integration pending.
+Updated: 3 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; standalone kyūsu, cup, and kettle model studies created, application integration pending.
 
 ## Phase 1 — Define the visual direction and palette
 
@@ -70,7 +70,7 @@ Deliverable: a palette sheet showing colour roles, material samples, and legible
 | --- | --- | --- |
 | Kyūsu | Reference-led squat body in dark iron-brown clay, recessed lid, short tapered spout, flared side handle wrapped in pale cord | Hollow body and open spout; removable lid with small knob/vent; side handle sits roughly perpendicular to the spout |
 | Cup | Rounded oatmeal glazed ceramic with fine mineral speckles, a narrow iron-brown rim, and a shallow exposed-clay foot | Approximately 6 cm tall / 180 ml brim capacity; hollow interior, rounded lip, and readable liquid surface; proportioned against the kyūsu |
-| Kettle | Restrained aged copper with a charcoal handle | Clear spout tip and grip; highlights reveal shape without overwhelming the cup and pot |
+| Kettle | Reference-led stainless kettle with a matte charcoal exterior, bright stainless interior, and a riveted wooden overhead grip | Approximately 22 × 16 × 17.7 cm including the upright handle; open spout, removable lid with wooden knob, independent hinged handle |
 | Caddy | Deep moss finish with a simple cream label | Lid/body separation and scoop entry are easy to read |
 | Scoop | Pale bamboo with fine directional grain | Bowl and handle remain distinct at the seated camera distance |
 | Table | Medium warm wood, low sheen, broad quiet grain | Supports clear object silhouettes and contact shadows |
@@ -104,6 +104,21 @@ The supplied cup photographs and dimensions refine the earlier generic cream-cer
 An editable Blender study, standalone GLB, construction script, and checked previews are available. See [the cup asset notes](assets/cup/README.md), [cup preview](assets/cup/previews/cup-hero.png), and [cup beside the kyūsu](assets/cup/previews/cup-with-kyusu.png). The comparison uses both models at their physical scale. A provisional liquid-surface anchor leaves headroom at approximately 151 ml; that is separate from nominal brim capacity. Liquid rendering and ceremony integration remain later work.
 
 Reference filenames: `1451-1_c5212-b-800px.webp` (upright cup and interior), `1451-11_c5212-front.webp` (front silhouette, foot, and glaze), and `c5212-detail-1080px.webp` (rim and interior). The photographs are visual references only and are not packaged as textures or runtime assets.
+
+#### Kettle reference study — 3 November 2026
+
+The third study follows the supplied traditional Japanese kettle photographs and dimensions. This replaces the earlier aged-copper kettle proposal:
+
+- A cylindrical, softly rounded stainless body with a sloping shoulder, circular opening, and charcoal exterior finish interpreted from the photographs.
+- A bright stainless inner wall/floor and thin exposed lip at the short, upward-curving open spout.
+- A removable shallow lid with a small pressure vent and tapered wooden knob.
+- An overhead steel bail handle, hinged at opposite sides, with two wooden grip halves and two visible silver rivets. The lid and handle have separate transform groups.
+- Reference dimensions: approximately 22 cm overall width, 16 cm body diameter, and 17.7 cm high with the handle upright. The study measures approximately 22.6 × 16.0 × 17.75 cm, including hinges and spout.
+- Material direction: the supplied 18-8 stainless-steel body reference, contrasting bare interior metal, and warm wood. The dark exterior is a visual finish interpretation; the exact coating is not specified.
+
+The editable Blender source, standalone GLB, construction script, and checked previews are available in [the kettle asset notes](assets/kettle/README.md). See [the assembled kettle](assets/kettle/previews/kettle-hero.png), [open lid and folded handle](assets/kettle/previews/kettle-open.png), [grip detail](assets/kettle/previews/kettle-grip-detail.png), and [all three studies at shared scale](assets/kettle/previews/kettle-with-teaware.png). Runtime movement, pour alignment, and performance acceptance remain to be calibrated in the application.
+
+Reference filenames: `Miyaco-Classic-Stainless-Steel-Kettle-1.5L-Made-in-Japan.webp` (assembled silhouette), `Miyaco-Classic-Stainless-Steel-Kettle-03.webp` (open interior and detached lid), and `Miyaco-Classic-Stainless-Steel-Kettle-05.webp` (wood grip, rivets, hinge, and knob). The photographs are not bundled into the model or used as textures.
 
 Use subtle imperfections at the scale visible in normal play. Avoid oversized grain, heavy damage, bright metallic trim, or decorative details that obscure functional parts. Review the cup and kyūsu interiors early because the camera sees inside them.
 
