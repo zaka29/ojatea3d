@@ -1,0 +1,145 @@
+{
+  "units": "metres",
+  "table_surface_world_z": 0.7200000286102295,
+  "tray_surface_local_z": 0.035999998450279236,
+  "service_surface_world_z": 0.7560000270605087,
+  "placements": {
+    "table": [
+      0,
+      0,
+      0
+    ],
+    "tray": [
+      0,
+      -0.025,
+      0.7200000286102295
+    ],
+    "kettle": [
+      -0.245,
+      0.055,
+      0.7560000270605087
+    ],
+    "teabox": [
+      -0.03,
+      0.10500000000000001,
+      0.7560000270605087
+    ],
+    "kyusu": [
+      0.12,
+      0.04,
+      0.7560000270605087
+    ],
+    "cup": [
+      0.31,
+      0.08499999999999999,
+      0.7560000270605087
+    ]
+  },
+  "world_bounds": {
+    "table": {
+      "min": [
+        -0.800000011920929,
+        -0.42430001497268677,
+        0.0
+      ],
+      "max": [
+        0.800000011920929,
+        0.42430001497268677,
+        0.7199999690055847
+      ]
+    },
+    "tray": {
+      "min": [
+        -0.41999998688697815,
+        -0.24500000476837158,
+        0.7200000286102295
+      ],
+      "max": [
+        0.41999998688697815,
+        0.19499999284744263,
+        0.7560000419616699
+      ]
+    },
+    "kettle": {
+      "min": [
+        -0.3295000195503235,
+        -0.02494291216135025,
+        0.7560000419616699
+      ],
+      "max": [
+        -0.10398687422275543,
+        0.1349429190158844,
+        0.9335000514984131
+      ]
+    },
+    "teabox": {
+      "min": [
+        -0.07519999891519547,
+        0.05976835638284683,
+        0.7559271454811096
+      ],
+      "max": [
+        0.015200002118945122,
+        0.15016835927963257,
+        0.8816271424293518
+      ]
+    },
+    "kyusu": {
+      "min": [
+        0.05256032198667526,
+        -0.08750747889280319,
+        0.7560833692550659
+      ],
+      "max": [
+        0.22913730144500732,
+        0.10738961398601532,
+        0.8495000600814819
+      ]
+    },
+    "cup": {
+      "min": [
+        0.2707255184650421,
+        0.04567944258451462,
+        0.7559292316436768
+      ],
+      "max": [
+        0.3492739498615265,
+        0.1242278590798378,
+        0.8159292340278625
+      ]
+    }
+  },
+  "static_checks": {
+    "kettle": {
+      "base_near_surface": true,
+      "footprint_within_tray_outer_bounds": true,
+      "within_main_service_zone": true
+    },
+    "teabox": {
+      "base_near_surface": true,
+      "footprint_within_tray_outer_bounds": true,
+      "within_main_service_zone": true
+    },
+    "kyusu": {
+      "base_near_surface": true,
+      "footprint_within_tray_outer_bounds": true,
+      "within_main_service_zone": true
+    },
+    "cup": {
+      "base_near_surface": true,
+      "footprint_within_tray_outer_bounds": true,
+      "within_main_service_zone": true
+    }
+  },
+  "reserved_lid_rest_centres_tray_xy": {
+    "teabox": [
+      -0.11,
+      -0.025
+    ],
+    "kyusu": [
+      0.32,
+      -0.025
+    ]
+  },
+  "status": "Visual scale/composition study; not room architecture or runtime integration."
+}

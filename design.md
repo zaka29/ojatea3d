@@ -1,6 +1,6 @@
 # OjaTea — Technical Design
 
-Updated: 24 October 2026. This document describes the implementation currently in this repository and the boundaries for the next visual-production phase.
+Updated: 13 November 2026. This document describes the implementation currently in this repository and the boundaries for the next visual-production phase.
 
 ## 1. Product and implementation scope
 
@@ -160,7 +160,7 @@ Replacement models should preserve or explicitly recalibrate:
 4. Lid seating and detached resting transforms.
 5. Liquid geometry placement and the meaning of normalized fill progress.
 
-Pour targets and ready poses already derive from shared layout anchors. The current source-local spout offsets and tilt configuration are supplied in `App.tsx`; a future asset wrapper can bind these to named model nodes. Blender-to-GLB export, semantic anchor nodes, compressed textures, and a model-loading layer are planned work, not existing infrastructure.
+Pour targets and ready poses already derive from shared layout anchors. The current source-local spout offsets and tilt configuration are supplied in `App.tsx`; a future asset wrapper can bind these to named model nodes. Standalone Blender/GLB asset studies now provide exportable geometry and semantic anchors under `assets/`, with GLBs under `public/models/`. These files are not mounted in the runtime scene. A general model-loading layer, calibrated asset wrappers, and compressed-texture delivery remain planned work.
 
 The ritual store and `GuidedPour` should retain their behavioral roles as models are replaced. Visual asset changes should primarily affect model components, material configuration, bounds, and anchors. Extracting the object functions from `App.tsx` into dedicated files is a natural Phase 3 organization step.
 

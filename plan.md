@@ -1,6 +1,6 @@
 # OjaTea — Visual identity plan
 
-Updated: 3 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; standalone kyūsu, cup, and kettle model studies created, application integration pending.
+Updated: 13 November 2026. Status: standalone tea-ware and furnishing studies created and checked in a shared composition. Application integration and geometry/behaviour separation remain pending.
 
 ## Phase 1 — Define the visual direction and palette
 
@@ -12,7 +12,7 @@ The goal is a practical visual brief for the room, tea ware, materials, lighting
 
 **Proposed direction: a quiet tea room in warm afternoon light.**
 
-Build on the prototype's earthy greens, warm wood, cream ceramic, and restrained copper. The space should feel intimate, cared for, and inviting. Objects should have believable proportions and tactile surfaces, with subtle handmade variation. Keep the room visually simple so the visitor can immediately read the next action.
+Build on the prototype's earthy greens, warm wood, and cream ceramic, with charcoal and stainless steel established by the kettle and tea-box references. The space should feel intimate, cared for, and inviting. Objects should have believable proportions and tactile surfaces, with subtle handmade variation. Keep the room visually simple so the visitor can immediately read the next action.
 
 Use these principles to judge every visual choice:
 
@@ -32,7 +32,7 @@ Collect approximately eight to twelve references, grouped by purpose:
 | --- | --- | --- |
 | Room and composition | Intimate seated viewpoint, simple wall treatment, diffused window light, sparse decoration | Room proportions, background detail, negative space |
 | Tea ware | Side-handled kyūsu, open ceramic cup, functional kettle, lidded caddy, bamboo scoop | Silhouettes, proportions, material relationships |
-| Surface detail | Matte clay, warm ceramic glaze, fine wood grain, paper/plaster, aged copper | Texture scale, roughness, restrained imperfections |
+| Surface detail | Matte clay, warm ceramic glaze, weathered timber, polished walnut, paper/plaster, charcoal-finished steel | Texture scale, roughness, restrained imperfections |
 | Light and atmosphere | Warm directional light, readable shadows, gentle background falloff | Light direction, warmth, exposure |
 
 Annotate each reference with the specific feature to borrow and record its source. References guide the design; downloadable production assets require their own licence review. Keep visual choices appropriate to the existing sencha sequence without claiming historical reconstruction.
@@ -47,9 +47,9 @@ Use the following as the initial palette. Existing colours are retained where th
 | --- | --- | --- |
 | Deep forest | `#20271F` | Page background, dark interface surfaces, room shadow reference |
 | Moss | `#44483C` | Recesses, subdued room accents |
-| Leaf green | `#526034` | Caddy detail and tea-leaf reference |
+| Leaf green | `#526034` | Tea leaves and restrained room accents; caddy finish now follows the charcoal reference |
 | Warm timber | `#6D513A` | Table base colour |
-| Bamboo | `#9B8664` | Tray and scoop colour family |
+| Bamboo | `#9B8664` | Scoop colour family and pale tray-inlay reference; tray body follows darker timber |
 | Clay | `#AA795B` | Proposed kyūsu body colour |
 | Ceramic cream | `#D1C7AD` | Cup exterior and rim |
 | Warm plaster | `#B6AD96` | Proposed light-facing wall/paper surface |
@@ -71,10 +71,10 @@ Deliverable: a palette sheet showing colour roles, material samples, and legible
 | Kyūsu | Reference-led squat body in dark iron-brown clay, recessed lid, short tapered spout, flared side handle wrapped in pale cord | Hollow body and open spout; removable lid with small knob/vent; side handle sits roughly perpendicular to the spout |
 | Cup | Rounded oatmeal glazed ceramic with fine mineral speckles, a narrow iron-brown rim, and a shallow exposed-clay foot | Approximately 6 cm tall / 180 ml brim capacity; hollow interior, rounded lip, and readable liquid surface; proportioned against the kyūsu |
 | Kettle | Reference-led stainless kettle with a matte charcoal exterior, bright stainless interior, and a riveted wooden overhead grip | Approximately 22 × 16 × 17.7 cm including the upright handle; open spout, removable lid with wooden knob, independent hinged handle |
-| Caddy | Deep moss finish with a simple cream label | Lid/body separation and scoop entry are easy to read |
+| Caddy / tea box | Reference-led charcoal cylinder with fine surface texture, darker brown interior/rim, circular lid, and arched loop grip | Hollow interior, separate lift-off lid, pale underside seal, clear scoop entry; no label added where the reference has none |
 | Scoop | Pale bamboo with fine directional grain | Bowl and handle remain distinct at the seated camera distance |
-| Table | Medium warm wood, low sheen, broad quiet grain | Supports clear object silhouettes and contact shadows |
-| Tray | Slightly lighter bamboo/wood than the table | Visible usable surface and enough space for detached lids and guided movement |
+| Table | Weathered rustic plank timber, subdued sheen, visible grain, joints, and restrained cracks | A continuous usable support surface; inferred leg structure documented separately from the photographed top |
+| Tray | Dark warm timber slab with rounded edges, an offset pale longitudinal inlay, drainage channel, and separate dark catch pan | Independent tray and pan; broad clear service zones for tea ware and detached lids; no raised perimeter rim |
 | Room | Warm plaster/paper, darker timber framing, one restrained plant | Background depth and atmosphere while preserving clear views of the tea setting |
 
 #### Kyūsu reference study — 2 November 2026
@@ -119,6 +119,33 @@ The third study follows the supplied traditional Japanese kettle photographs and
 The editable Blender source, standalone GLB, construction script, and checked previews are available in [the kettle asset notes](assets/kettle/README.md). See [the assembled kettle](assets/kettle/previews/kettle-hero.png), [open lid and folded handle](assets/kettle/previews/kettle-open.png), [grip detail](assets/kettle/previews/kettle-grip-detail.png), and [all three studies at shared scale](assets/kettle/previews/kettle-with-teaware.png). Runtime movement, pour alignment, and performance acceptance remain to be calibrated in the application.
 
 Reference filenames: `Miyaco-Classic-Stainless-Steel-Kettle-1.5L-Made-in-Japan.webp` (assembled silhouette), `Miyaco-Classic-Stainless-Steel-Kettle-03.webp` (open interior and detached lid), and `Miyaco-Classic-Stainless-Steel-Kettle-05.webp` (wood grip, rivets, hinge, and knob). The photographs are not bundled into the model or used as textures.
+
+#### Tea-box reference study — completed 13 November 2026
+
+The supplied tea-box images replace the earlier moss-green, labelled caddy proposal with a plain charcoal container:
+
+- A softly rounded cylinder, approximately 90 mm in diameter and 100 mm high to the opening, with a dark finely textured exterior and brown rim/interior.
+- A real hollow interior and floor, leaving clear access for the scoop.
+- A separate circular lift-off lid, an arched loop grip, and a pale underside sealing ring interpreted from the photographs. The exact body and sealing materials are not specified by the references.
+- Approximately 126 mm total height including the loop, proportioned to the existing cup and kyūsu.
+
+See [the tea-box asset notes](assets/teabox/README.md), [closed view](assets/teabox/previews/teabox-closed.png), and [open view](assets/teabox/previews/teabox-open.png). Source geometry, materials, lid hierarchy, and semantic anchors remain independent of ceremony input and scoop choreography.
+
+Reference filenames: `teabox 1.webp`, `teabox 2.webp`, and `teabox 3.webp`. Labels, rulers, loose leaves, watermarks, and background props are not part of the model. Photos remain outside the repository and are not used as texture pixels.
+
+#### Table and tray reference study — completed 13 November 2026
+
+The furniture follows the two supplied tea-table photographs, with dimensions inferred to support the existing tea ware:
+
+- A rustic plank timber table, approximately 1.60 × 0.85 m with its surface 0.72 m above the floor. Legs, aprons, and stretchers are inferred because the photographs do not show the full supporting structure.
+- A separate dark timber tray, approximately 0.84 × 0.44 m, with rounded edges and a low overall height of 36 mm. Its broad surface remains flat rather than having a raised perimeter rim.
+- An offset pale inlay along the long axis, with an adjacent recessed drainage channel.
+- A separate dark catch pan below the slab, with a named moving parent and a 0.20 m open reference offset. It is modelled as a removable visual part; functional fluid drainage is not implemented.
+- Separate table/tray roots and surface anchors allow the furniture to be replaced without owning the tea-object controllers. The main service area avoids the channel, with spare positions reserved for detached lids.
+
+See [the furniture asset notes](assets/table-tray/README.md), [table and tray preview](assets/table-tray/previews/table-and-tray.png), and [open catch-pan preview](assets/table-tray/previews/tray-pan-open.png). The photographs `table and tray.webp` and `table and tray 2.webp` guide the surfaces, proportions, inlay, channel, and pan. The pictured people, books, cups, and teapot are reference context rather than additional reconstructed assets.
+
+A [shared furnishing study](assets/room-setting/README.md) stages the table, tray, tea box, kettle, kyūsu, and cup at the same metre scale. Surface anchors determine placement, and static bounds are checked against the tray service area. This establishes a starting composition for the future room; guided movement clearance, responsive camera framing, walls, and final lighting still require implementation and review.
 
 Use subtle imperfections at the scale visible in normal play. Avoid oversized grain, heavy damage, bright metallic trim, or decorative details that obscure functional parts. Review the cup and kyūsu interiors early because the camera sees inside them.
 
