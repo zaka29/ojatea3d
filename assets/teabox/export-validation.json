@@ -1,0 +1,42 @@
+{
+  "glb_version": 2,
+  "bytes": 3861672,
+  "mesh_count": 5,
+  "anchors": 5,
+  "embedded_images": 2,
+  "triangles": 36884,
+  "node_names": [
+    "teabox_anchor_base",
+    "teabox_anchor_grip",
+    "teabox_anchor_lid_seat",
+    "teabox_anchor_opening",
+    "teabox_anchor_scoop_entry",
+    "teabox_body",
+    "teabox_lid_disc",
+    "teabox_lid_insert",
+    "teabox_lid_loop",
+    "teabox_lid_seal",
+    "teabox_lid",
+    "teabox_root"
+  ],
+  "structural_checks": "Header, names, embedded maps, mesh count, studio exclusion passed",
+  "blender_roundtrip": {
+    "status": "passed",
+    "meshes": 5,
+    "anchors": 5,
+    "images": [
+      {
+        "name": "teabox_charcoal_basecolor.002",
+        "pixels": 4194304,
+        "packed": true
+      },
+      {
+        "name": "teabox_charcoal_normal.002",
+        "pixels": 4194304,
+        "packed": true
+      }
+    ],
+    "base_z_m": 7.929446487441039e-13,
+    "height_m": 0.12562708556572774
+  }
+}

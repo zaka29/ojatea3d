@@ -1,0 +1,96 @@
+{
+  "units": "metres",
+  "dimensions_xyz_m": [
+    0.09032300487160683,
+    0.09032299369573593,
+    0.12562708556572774
+  ],
+  "body_height_m": 0.10042708332865732,
+  "opening_radius_m": 0.041,
+  "triangles": 36884,
+  "mesh_objects": 5,
+  "geometry_checks": {
+    "teabox_body": {
+      "triangles": 18816,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "teabox_lid_disc": {
+      "triangles": 8064,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "teabox_lid_insert": {
+      "triangles": 4224,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "teabox_lid_seal": {
+      "triangles": 4608,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "teabox_lid_loop": {
+      "triangles": 1172,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    }
+  },
+  "glb_bytes": 3861672,
+  "anchors_blender_z_up": {
+    "teabox_anchor_base": [
+      0,
+      0,
+      0
+    ],
+    "teabox_anchor_opening": [
+      0,
+      0,
+      0.09992708332865732
+    ],
+    "teabox_anchor_lid_seat": [
+      0.0,
+      0.0,
+      0.10042708367109299
+    ],
+    "teabox_anchor_grip": [
+      0,
+      0,
+      0.12242708332865732
+    ],
+    "teabox_anchor_scoop_entry": [
+      0,
+      0,
+      0.11192708332865732
+    ]
+  },
+  "anchors_gltf_y_up": {
+    "teabox_anchor_base": [
+      0,
+      0,
+      0
+    ],
+    "teabox_anchor_opening": [
+      0,
+      0.09992708332865732,
+      0
+    ],
+    "teabox_anchor_lid_seat": [
+      0.0,
+      0.10042708367109299,
+      -0.0
+    ],
+    "teabox_anchor_grip": [
+      0,
+      0.12242708332865732,
+      0
+    ],
+    "teabox_anchor_scoop_entry": [
+      0,
+      0.11192708332865732,
+      0
+    ]
+  },
+  "materials": "Charcoal granular finish and brown interior; pale lid seal interpreted from references, exact material unknown",
+  "status": "Standalone visual study; runtime integration and calibration pending."
+}
