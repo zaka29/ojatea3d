@@ -1,0 +1,128 @@
+{
+  "table": {
+    "glb_version": 2,
+    "bytes": 2377216,
+    "mesh_objects": 15,
+    "triangles": 3156,
+    "embedded_images": 2,
+    "nodes": [
+      "table_anchor_base",
+      "table_anchor_surface",
+      "table_end_apron_1",
+      "table_end_apron_-1",
+      "table_leg_1_1",
+      "table_leg_1_-1",
+      "table_leg_-1_1",
+      "table_leg_-1_-1",
+      "table_long_apron_1",
+      "table_long_apron_-1",
+      "table_low_stretcher_1",
+      "table_low_stretcher_-1",
+      "table_top_plank_00",
+      "table_top_plank_01",
+      "table_top_plank_02",
+      "table_top_plank_03",
+      "table_top_plank_04",
+      "table_root"
+    ],
+    "checks": "Header, asset-only hierarchy, anchors, normals, textured UVs, embedded maps and triangle total passed",
+    "blender_roundtrip": {
+      "import": "passed",
+      "mesh_objects": 15,
+      "anchors": 2,
+      "images": [
+        {
+          "name": "table_aged_oak_basecolor.001",
+          "packed_bytes": 1420385,
+          "pixel_values": 4718592,
+          "size": [
+            1536,
+            768
+          ]
+        },
+        {
+          "name": "table_aged_oak_normal.001",
+          "packed_bytes": 734037,
+          "pixel_values": 4718592,
+          "size": [
+            1536,
+            768
+          ]
+        }
+      ],
+      "bounds_min_blender": [
+        -0.800000011920929,
+        -0.42430001497268677,
+        0.0
+      ],
+      "bounds_max_blender": [
+        0.800000011920929,
+        0.42430001497268677,
+        0.7199999690055847
+      ]
+    }
+  },
+  "tray": {
+    "glb_version": 2,
+    "bytes": 2582892,
+    "mesh_objects": 10,
+    "triangles": 5640,
+    "embedded_images": 2,
+    "nodes": [
+      "tray_anchor_base",
+      "tray_anchor_channel",
+      "tray_anchor_pan_closed",
+      "tray_anchor_pan_open",
+      "tray_anchor_surface",
+      "tray_catch_pan_front",
+      "tray_catch_pan_shell",
+      "tray_catch_pan",
+      "tray_pale_inlay",
+      "tray_pan_guide_0.376",
+      "tray_pan_guide_-0.376",
+      "tray_support_0.398_0.196",
+      "tray_support_0.398_-0.196",
+      "tray_support_-0.398_0.196",
+      "tray_support_-0.398_-0.196",
+      "tray_walnut_slab",
+      "tray_root"
+    ],
+    "checks": "Header, asset-only hierarchy, anchors, normals, textured UVs, embedded maps and triangle total passed",
+    "blender_roundtrip": {
+      "import": "passed",
+      "mesh_objects": 10,
+      "anchors": 5,
+      "images": [
+        {
+          "name": "tray_walnut_basecolor.001",
+          "packed_bytes": 1434235,
+          "pixel_values": 4718592,
+          "size": [
+            1536,
+            768
+          ]
+        },
+        {
+          "name": "tray_walnut_normal.001",
+          "packed_bytes": 737934,
+          "pixel_values": 4718592,
+          "size": [
+            1536,
+            768
+          ]
+        }
+      ],
+      "bounds_min_blender": [
+        -0.41999998688697815,
+        -0.2199999988079071,
+        0.0
+      ],
+      "bounds_max_blender": [
+        0.41999998688697815,
+        0.2199999988079071,
+        0.035999998450279236
+      ],
+      "separate_pan_children": 2
+    }
+  }
+}

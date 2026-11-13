@@ -1,0 +1,269 @@
+{
+  "units": "metres",
+  "inference": "Dimensions and unseen table legs are inferred from reference photographs.",
+  "table": {
+    "surface_z": 0.72,
+    "dimensions_m": [
+      1.6,
+      0.8486,
+      0.72
+    ],
+    "anchors_blender_z_up": {
+      "table_anchor_base": [
+        0,
+        0,
+        0
+      ],
+      "table_anchor_surface": [
+        0,
+        0,
+        0.72
+      ]
+    },
+    "mesh_objects": 15,
+    "triangles": 3156,
+    "bounds_min": [
+      -0.800000011920929,
+      -0.42430001497268677,
+      0.0
+    ],
+    "bounds_max": [
+      0.800000011920929,
+      0.42430001497268677,
+      0.7199999690055847
+    ],
+    "geometry_checks": {
+      "table_top_plank_00": {
+        "triangles": 524,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_top_plank_01": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_top_plank_02": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_top_plank_03": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_top_plank_04": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_leg_-1_-1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_leg_-1_1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_end_apron_-1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_leg_1_-1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_leg_1_1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_end_apron_1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_long_apron_-1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_low_stretcher_-1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_long_apron_1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "table_low_stretcher_1": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      }
+    },
+    "glb_bytes": 2377216,
+    "anchors_gltf_y_up": {
+      "table_anchor_base": [
+        0,
+        0,
+        0
+      ],
+      "table_anchor_surface": [
+        0,
+        0.72,
+        0
+      ]
+    }
+  },
+  "tray": {
+    "surface_z": 0.036,
+    "dimensions_m": [
+      0.84,
+      0.44,
+      0.036
+    ],
+    "main_usable_bounds_xy": [
+      -0.39,
+      0.39,
+      -0.075,
+      0.195
+    ],
+    "foreground_strip_xy": [
+      -0.39,
+      0.39,
+      -0.19,
+      -0.13
+    ],
+    "drain_channel_y": -0.102,
+    "inlay_y": -0.122,
+    "pan_motion_axis": "+Y",
+    "pan_open_offset_m": 0.2,
+    "anchors_blender_z_up": {
+      "tray_anchor_base": [
+        0,
+        0,
+        0
+      ],
+      "tray_anchor_surface": [
+        0,
+        0,
+        0.036
+      ],
+      "tray_anchor_pan_closed": [
+        0,
+        0,
+        0
+      ],
+      "tray_anchor_pan_open": [
+        0,
+        0.2,
+        0
+      ],
+      "tray_anchor_channel": [
+        0,
+        -0.102,
+        0.0305
+      ]
+    },
+    "mesh_objects": 10,
+    "triangles": 5640,
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.2199999988079071,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.2199999988079071,
+      0.035999998450279236
+    ],
+    "geometry_checks": {
+      "tray_walnut_slab": {
+        "triangles": 2892,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_pale_inlay": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_support_-0.398_-0.196": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_support_-0.398_0.196": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_support_0.398_-0.196": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_support_0.398_0.196": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_pan_guide_-0.376": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_pan_guide_0.376": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_catch_pan_shell": {
+        "triangles": 1244,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      "tray_catch_pan_front": {
+        "triangles": 188,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      }
+    },
+    "glb_bytes": 2582892,
+    "anchors_gltf_y_up": {
+      "tray_anchor_base": [
+        0,
+        0,
+        0
+      ],
+      "tray_anchor_surface": [
+        0,
+        0.036,
+        0
+      ],
+      "tray_anchor_pan_closed": [
+        0,
+        0,
+        0
+      ],
+      "tray_anchor_pan_open": [
+        0,
+        0,
+        -0.2
+      ],
+      "tray_anchor_channel": [
+        0,
+        0.0305,
+        0.102
+      ]
+    }
+  }
+}
