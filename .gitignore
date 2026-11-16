@@ -12,3 +12,6 @@ playwright/.auth/
 .env
 .env.*
 !.env.example
+
+# Troop Worktrees
+.worktrees/
