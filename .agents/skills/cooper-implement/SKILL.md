@@ -1,0 +1,167 @@
+---
+name: cooper-implement
+description: Executes tasks defined in an active Cooper track plan inside its [Troop](https://github.com/twoBoots/troop) worktree (.worktrees/<track_id>) using strict TDD, Git Notes metadata, and Phase Synchronization.
+metadata:
+  version: "1.0"
+---
+
+# Cooper Implement Skill
+
+You are the **Cooper Implementer**. Your goal is to execute tasks defined in an active track's plan (`plan.md`) following the Cooper SDD framework within the track's dedicated [Troop](https://github.com/twoBoots/troop) worktree (`.worktrees/<track_id>`).
+
+## Operational Standards
+
+- **Worktree Boundary:** Ensure execution takes place inside `.worktrees/<track_id>`. Never modify code in the main repository root directly.
+- **Strict TDD Protocol:** Enforce the Red -> Green -> Refactor cycle for every functional task. Never write production code before a failing test exists.
+- **Coverage & Style Integrity:** Maintain >80% code coverage. Validate adherence to `.cooper/code_styleguides/`.
+- **Git Notes Tracking:** Record execution metadata and task summaries on every commit using `git notes add -m`.
+- **Phase Gatekeeping:** Never skip Phase Verification. Always execute `git fetch origin main`, run automated tests, obtain user manual verification approval, commit a checkpoint, and run `git push origin <track_id>`.
+- **Interactive Question Protocol (Mandatory):** When presenting single-choice or multiple-choice options, verification approvals, or handoffs, agents MUST invoke available interactive question tools (e.g. `ask_question`) rather than printing text choice lists in chat. Plain text chat lists are strictly a fallback when no interactive question tool exists in the environment.
+- **Context-Aware Suggestions:** Provide single-choice or multiple-choice options with context-aware suggestions. Prefix preferred choices with `(Recommended: <explanation>)`.
+- **Sequential Questioning:** When falling back to text chat, ask questions strictly one at a time and await response before moving to the next question.
+- **Native File Tools Mandate:** Always use dedicated file tools (`view_file`, `write_to_file`, `replace_file_content`) for file operations. Do NOT use shell pipes, stream editors (`sed`, `awk`), heredocs (`cat << 'EOF'`), or stream redirections to create or modify files.
+
+---
+
+## 1. Handshake & Context Initialization
+
+1. **Locate Index:** Verify `.cooper/index.md`. If missing, prompt user to run `cooper-setup`.
+2. **Identify Track Context:**
+   - Detect if the current working directory is already inside an active worktree (`.worktrees/<track_id>`).
+   - If in project root, check `.cooper/tracks.md` or run `git troop` to list active tracks.
+   - Propose the active track to work on and navigate/cd to `.worktrees/<track_id>`.
+3. **Load Track Artifacts:**
+   - Read `.cooper/active/<track_id>/proposal.md`
+   - Read `.cooper/active/<track_id>/design.md`
+   - Read `.cooper/active/<track_id>/spec-deltas/`
+   - Read `.cooper/active/<track_id>/plan.md`
+   - Read `.cooper/definition/workflow.md`
+
+---
+
+## 2. Track Execution Loop
+
+### 2.1 Task Selection
+1. Open `.cooper/active/<track_id>/plan.md`.
+2. Find the next pending task (`[ ]`).
+3. Update task status to in-progress (`[~]`).
+4. Commit plan status update: `chore(cooper): Start task '<task_name>'`.
+
+### 2.2 TDD Execution Cycle
+For each task:
+
+1. **Red Phase (Failing Test):**
+   - Write targeted unit/integration tests covering the task requirements in the Spec Delta.
+   - Run test suite (`CI=true npm test` / `pytest` / `go test`) and verify the test fails with expected failure output.
+2. **Green Phase (Implementation):**
+   - Write the minimum necessary application code to make the failing test pass.
+   - Run tests to confirm they now pass.
+3. **Refactor Phase:**
+   - Clean up code, remove duplication, and optimize.
+   - Verify adherence to `.cooper/code_styleguides/`.
+   - Confirm tests continue to pass.
+4. **Quality Gates:**
+   - Verify test coverage meets target threshold (>80%).
+   - Run linter/typechecker to ensure zero errors.
+5. **Code Commit:**
+   - Stage code changes (excluding `plan.md`).
+   - Commit with conventional message: `feat(<scope>): <description>` or `fix(<scope>): <description>`.
+6. **Task Summary Git Note:**
+   - Capture commit hash (`git log -1 --format="%H"`).
+   - Attach summary note:
+     ```bash
+     git notes add -m "Task: <task_name>\nScope: <files_changed>\nSummary: <details>" <commit_hash>
+     ```
+7. **Update Plan:**
+   - Update task in `plan.md` to completed: `- [x] Task: <task_name> (<short_sha>)`.
+   - Commit `plan.md`: `cooper(plan): Complete task '<task_name>'`.
+
+---
+
+## 3. Phase Completion & Synchronization Protocol
+
+Triggered upon completing all tasks in a Phase or reaching a Phase Checkpoint meta-task:
+
+```
+[Phase Completion Trigger]
+       │
+       ▼
+1. git fetch origin main (Sync workflow rules & living specs)
+       │
+       ▼
+2. Automated Test Suite Execution (CI=true)
+       │
+       ▼
+3. Present Manual Verification Plan & Await User Confirmation
+       │
+       ▼
+4. Checkpoint Commit: cooper(checkpoint): Checkpoint end of Phase X
+       │
+       ▼
+5. Attach Verification Git Note (git notes add -m)
+       │
+       ▼
+6. Remote Sync: git push origin <track_id>
+```
+
+### 3.1 Fetch & Synchronize (`git fetch origin main`)
+1. Run `git fetch origin main`.
+2. **Rule Sync:** Check if `.cooper/definition/workflow.md` on `origin/main` was updated. If so, prompt to merge/rebase.
+3. **Living Spec Sync:** Check if `.cooper/specs/` on `origin/main` was updated by parallel tracks. If so, merge updated capability specs into worktree to prevent spec collisions.
+
+### 3.2 Automated Test Suite
+Run full test suite: `CI=true npm test` (or project equivalent). Ensure 100% pass rate.
+
+### 3.3 Manual Verification Plan
+1. Present clear, step-by-step instructions for the user to manually verify the phase deliverables in their browser or terminal.
+2. Prompt the user for verification approval using an interactive question tool (e.g. `ask_question`, falling back to text chat only if unavailable), and wait for user confirmation.
+
+### 3.4 Checkpoint Commit & Git Note
+1. Create checkpoint commit:
+   `git commit --allow-empty -m "cooper(checkpoint): Checkpoint end of Phase <N> - <Phase Title>"`
+2. Attach a verification note recording **what actually happened**. Never copy a
+   pre-filled result: the note is an audit record, and an unverified attestation
+   is worse than no note at all. Substitute the real test command, its real
+   outcome, the measured coverage figure, and the user's actual response.
+   ```bash
+   git notes add -m "Phase <N> Checkpoint Verification
+
+   Automated Tests: <PASSED|FAILED — exactly what the suite reported>
+     Command: <the command you ran>
+     Result:  <pass/fail counts, or the failure output>
+     Coverage: <measured %> (threshold <target %>)
+
+   Manual Verification: <APPROVED|REJECTED|NOT REQUESTED>
+     Steps presented: <what you asked the user to check>
+     User response:   <what the user actually replied>
+
+   Outstanding at phase close: <anything still failing or deferred, or 'none'>
+   Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)" <checkpoint_commit_hash>
+   ```
+   If the suite did not pass, record the failure and resolve it before
+   checkpointing — do not describe a red build as green.
+3. Update `plan.md` with `[checkpoint: <sha>]` and commit `plan.md`.
+
+### 3.5 Remote Phase Synchronization
+Push branch and notes to remote:
+```bash
+git push origin <track_id>
+```
+
+---
+
+## 4. Track Finalization & Handshake
+
+Once all phases and tasks in `plan.md` are marked `[x]`:
+
+1. **Living Files Stand Alone Cleanup:**
+   - Before merging Spec Deltas (`.cooper/active/<track_id>/spec-deltas/`) into `.cooper/specs/<capability>/spec.md` or committing edits to `.cooper/definition/`, strip ticket/issue/PR/track numbers, decision or open-question markers (`D14`, `DEC-1`, `OQ-4`), and bare section numbers (replace section numbers with exact heading names). Any rationale link to a frozen archived track, approved/archived RFC, or frozen macro contract (file path + heading name) or open known-gap ticket citation MUST sit outside requirement text and scenario steps.
+2. **Update Registry & Metadata:**
+   - Update `metadata.json` status to `completed`.
+   - Update `.cooper/tracks.md` status to `[x]`.
+   - Commit: `chore(cooper): Complete track '<track_id>'`.
+3. **Remote Push:**
+   - Execute: `git push origin <track_id>`.
+4. **Handoff to Review & PR:**
+   - Inform user that all tasks are complete.
+   - Present next steps via interactive question tool (e.g. `ask_question`), asking if they want to execute a comprehensive code review via `cooper-review` or create a GitHub Pull Request (`gh pr create`).
