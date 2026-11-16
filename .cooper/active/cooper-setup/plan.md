@@ -7,7 +7,7 @@
 - [x] Preserve local skills and establish agent bridges and Troop ignore rules.
 - [x] Correct Git Notes synchronization guidance.
 - [x] Validate links, skill metadata, and standalone requirements: 28 Markdown documents, 24 relative links, six valid skill frontmatters, no flagged standalone-reference violations. Confirm bridge target and worktree ignore rule.
-- [ ] Verify staged Git diff.
-- [ ] Commit setup and attach an accurate task summary note.
+- [x] Verify staged Git diff: `git diff --cached --check` passed.
+- [x] Commit setup and attach an accurate task summary note: `868e5b3`.
 
 Documentation-only initialization adds no executable behavior; application TDD and coverage measurements do not apply to this change. No application test results or manual ceremony verification are claimed.
