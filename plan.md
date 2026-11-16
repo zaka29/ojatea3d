@@ -1,200 +1,152 @@
 # OjaTea — Visual identity plan
 
-Updated: 13 November 2026. Status: standalone tea-ware and furnishing studies created and checked in a shared composition. Application integration and geometry/behaviour separation remain pending.
+Updated: 14 November 2026. Status: standalone tea-ware and furnishing studies reviewed; working asset brief prepared. Phase 1 now uses the built setting as its baseline; room/scoop blockouts and seated scene/UI studies remain. Application integration and geometry/behaviour separation remain pending.
 
-## Phase 1 — Define the visual direction and palette
+## Phase 1 — Consolidate the built tea setting and resolve the room/UI direction
 
-This is the first stage of the broader **Phase 3 — Visual identity** roadmap, corresponding to step 3.1 in [the visual identity plan](docs/phase-3-visual-identity.md). It does not restart the application's development phases.
+This is roadmap step 3.1, **Visual brief**, within the broader [Phase 3 visual identity roadmap](docs/phase-3-visual-identity.md). The baseline is now the authored tea setting, rather than a new search for a style. Preserve the seated, first-person sencha sequence in [design.md](design.md).
 
-The goal is a practical visual brief for the room, tea ware, materials, lighting, and interface. Use [design.md](design.md) as the implementation baseline: a seated, first-person sencha ritual with guided object movement, a quiet completion state, and desktop-first input. The deliverables below are planned work; this document establishes the starting decisions.
+**Current baseline:** four tea vessels and separate table/tray assets have editable Blender sources, GLB exports, materials, anchors and inspected previews. They have been staged together at physical metre scale. The app still uses procedural objects. The scoop, room shell and plant have no external asset study yet.
 
-### 1.1 — Establish the direction
+**Phase outcome:** a concrete handoff specifying what to retain from those assets, what remains to design, and how to judge the setting with the interface. Asset import, movement calibration and final renderer acceptance follow in later stages.
 
-**Proposed direction: a quiet tea room in warm afternoon light.**
+### 1.1 — Retain the built material family
 
-Build on the prototype's earthy greens, warm wood, and cream ceramic, with charcoal and stainless steel established by the kettle and tea-box references. The space should feel intimate, cared for, and inviting. Objects should have believable proportions and tactile surfaces, with subtle handmade variation. Keep the room visually simple so the visitor can immediately read the next action.
+**Direction established:** dark iron-brown clay, oatmeal ceramic, charcoal steel and charcoal caddy on a dark inlaid timber tray, supported by a weathered plank table. Pale cord, wood grips and bamboo provide small lighter accents. Build the room around this setting.
 
-Use these principles to judge every visual choice:
+Use these decisions for subsequent work:
 
-- **The ritual leads:** the kyūsu, cup, kettle, caddy, and scoop remain the scene's clearest objects.
-- **Materials carry the detail:** fine wood grain, ceramic texture, and restrained wear give surfaces character.
-- **Light creates depth:** a soft directional source defines rims, spouts, handles, and contact with the tray.
-- **Space creates calm:** leave breathing room around the tea setting and interface.
-- **Feedback stays clear:** focus, selection, instructions, and preparation progress remain easy to recognise.
+- Keep the kyūsu squat, side-handled and cord-wrapped; retain its dark clay finish and recessed lid.
+- Keep the cup rounded and handleless, with oatmeal speckles, a fine brown rim and exposed-clay foot.
+- Keep the kettle charcoal outside and stainless inside, with the riveted wooden bail grip. The earlier copper proposal is retired.
+- Keep the tea box plain charcoal with a loop lid and pale underside seal. The earlier green labelled caddy is retired.
+- Keep the weathered table distinct from the smoother, darker tray. Retain the tray's offset pale inlay, channel and separate pan; do not add a raised perimeter rim.
+- Add a pale bamboo scoop and a restrained plaster/timber room. Keep decorative detail outside the tea-object silhouettes and guidance area.
 
-Deliverable: a short direction statement and a checklist for judging references and assets.
+**Status:** direction recorded. No new vessel style search is required. Detailed source-photo annotations and modelling decisions remain in the linked asset READMEs below.
 
-### 1.2 — Assemble a focused reference board
+### 1.2 — Use the existing studies as the reference set
 
-Collect approximately eight to twelve references, grouped by purpose:
+The [shared tabletop study](assets/room-setting/previews/room-setting-tabletop.png) is the starting material/composition reference. The [wide study](assets/room-setting/previews/room-setting-wide.png) shows furniture structure. Neither establishes the seated camera or the finished room.
 
-| Reference group | What to look for | Decision it supports |
+| Reference | Retain | Remaining decision |
 | --- | --- | --- |
-| Room and composition | Intimate seated viewpoint, simple wall treatment, diffused window light, sparse decoration | Room proportions, background detail, negative space |
-| Tea ware | Side-handled kyūsu, open ceramic cup, functional kettle, lidded caddy, bamboo scoop | Silhouettes, proportions, material relationships |
-| Surface detail | Matte clay, warm ceramic glaze, weathered timber, polished walnut, paper/plaster, charcoal-finished steel | Texture scale, roughness, restrained imperfections |
-| Light and atmosphere | Warm directional light, readable shadows, gentle background falloff | Light direction, warmth, exposure |
+| [Kyūsu notes and previews](assets/kyusu/README.md) | Body/handle/spout relationship, cord, recessed vented lid, dark mineral clay | Check dark iron-brown appearance under runtime light |
+| [Cup notes and previews](assets/cup/README.md) | Oatmeal glaze, brown lip, rounded hollow body, shallow foot | Keep glaze detail visible without the cup washing out |
+| [Kettle notes and previews](assets/kettle/README.md) | Charcoal shell, bare steel cavity and pouring lip, independent bail/lid, riveted grip | Readable dark silhouette and overhead clearance |
+| [Tea-box notes and previews](assets/teabox/README.md) | Plain charcoal cylinder, brown interior, separate loop lid and pale seal | Scoop size/access and detached-lid space |
+| [Table/tray notes and previews](assets/table-tray/README.md) | Weathered planks, dark rounded slab, pale inlay/channel and catch pan | Reduce distracting reflections if they persist in the running scene |
 
-Annotate each reference with the specific feature to borrow and record its source. References guide the design; downloadable production assets require their own licence review. Keep visual choices appropriate to the existing sencha sequence without claiming historical reconstruction.
-
-Deliverable: one annotated board with a clear preferred direction. Reference gathering is pending.
+**Remaining reference task:** select a seated room/window reference and a bamboo-scoop reference, annotate the feature to borrow and record source provenance. Assemble these alongside the existing previews in one review sheet. Do not collect an arbitrary new set of eight to twelve tea-ware images. Existing photographs remain visual references outside runtime packages; third-party production assets need their own licence review.
 
 ### 1.3 — Set the working palette
 
-Use the following as the initial palette. Existing colours are retained where they already support the direction; the lighter wall and muted text colours are proposed refinements. These values are design targets, not new application tokens yet.
+Separate authored material appearance from flat interface colours. The built textures and PBR materials define the tea ware and furniture; do not tint them to match the prototype's old colour table.
 
-| Colour | Hex | Intended role |
+| Material family | Current target | Source of truth |
 | --- | --- | --- |
-| Deep forest | `#20271F` | Page background, dark interface surfaces, room shadow reference |
-| Moss | `#44483C` | Recesses, subdued room accents |
-| Leaf green | `#526034` | Tea leaves and restrained room accents; caddy finish now follows the charcoal reference |
-| Warm timber | `#6D513A` | Table base colour |
-| Bamboo | `#9B8664` | Scoop colour family and pale tray-inlay reference; tray body follows darker timber |
-| Clay | `#AA795B` | Proposed kyūsu body colour |
-| Ceramic cream | `#D1C7AD` | Cup exterior and rim |
-| Warm plaster | `#B6AD96` | Proposed light-facing wall/paper surface |
-| Rice paper | `#F0EBDC` | Primary interface text |
-| Muted parchment | `#C5C0B2` | Proposed supporting text on dark backing |
-| Tea gold | `#D8C497` | Focus, progress, key controls, restrained emphasis |
-| Infused tea | `#8D7940` | Starting reference for liquid colour |
+| Kyūsu | Dark iron-brown mineral clay with pale natural-fibre cord | Kyūsu source materials/textures and reference notes |
+| Cup | Oatmeal speckled glaze, narrow iron-brown lip, exposed-clay foot | Cup source materials/textures and reference notes |
+| Kettle | Matte charcoal exterior, bright stainless interior/lip, warm wood grip/knob | Kettle source materials and wood maps |
+| Tea box | Fine charcoal texture, darker brown rim/interior, pale lid seal | Tea-box source materials/textures |
+| Table / tray | Weathered timber / darker warm walnut-coloured slab with pale inlay | Separate table/tray wood maps and materials |
+| Scoop | Pale directional bamboo | To be authored against the caddy opening |
+| Room | Warm plaster/paper, dark timber frame, muted green plant | To be demonstrated in the room study |
 
-Keep forest and moss in the background, warm wood through the middle of the scene, and cream/clay around the ritual's focal area. Reserve tea gold for meaningful interface emphasis. The cup's light interior should make liquid level and tea colour easy to see.
+Retain these explicit UI/environment targets for the next sample; they are not implemented theme tokens:
 
-Review 3D colours under the actual renderer, tone mapping, and lights: a material's hex value will not match a flat interface swatch on screen. Check text and focus visibility against the final composited background, including bright window areas. Give essential guidance a reliable dark backing where needed; avoid relying on low-opacity text or colour alone to convey state.
-
-Deliverable: a palette sheet showing colour roles, material samples, and legible interface combinations.
-
-### 1.4 — Define the material family and object silhouettes
-
-| Asset | Proposed appearance | Functional visual requirement |
+| Role | Hex | Use |
 | --- | --- | --- |
-| Kyūsu | Reference-led squat body in dark iron-brown clay, recessed lid, short tapered spout, flared side handle wrapped in pale cord | Hollow body and open spout; removable lid with small knob/vent; side handle sits roughly perpendicular to the spout |
-| Cup | Rounded oatmeal glazed ceramic with fine mineral speckles, a narrow iron-brown rim, and a shallow exposed-clay foot | Approximately 6 cm tall / 180 ml brim capacity; hollow interior, rounded lip, and readable liquid surface; proportioned against the kyūsu |
-| Kettle | Reference-led stainless kettle with a matte charcoal exterior, bright stainless interior, and a riveted wooden overhead grip | Approximately 22 × 16 × 17.7 cm including the upright handle; open spout, removable lid with wooden knob, independent hinged handle |
-| Caddy / tea box | Reference-led charcoal cylinder with fine surface texture, darker brown interior/rim, circular lid, and arched loop grip | Hollow interior, separate lift-off lid, pale underside seal, clear scoop entry; no label added where the reference has none |
-| Scoop | Pale bamboo with fine directional grain | Bowl and handle remain distinct at the seated camera distance |
-| Table | Weathered rustic plank timber, subdued sheen, visible grain, joints, and restrained cracks | A continuous usable support surface; inferred leg structure documented separately from the photographed top |
-| Tray | Dark warm timber slab with rounded edges, an offset pale longitudinal inlay, drainage channel, and separate dark catch pan | Independent tray and pan; broad clear service zones for tea ware and detached lids; no raised perimeter rim |
-| Room | Warm plaster/paper, darker timber framing, one restrained plant | Background depth and atmosphere while preserving clear views of the tea setting |
+| Deep forest | `#20271F` | Page and reliable guidance-panel backing |
+| Moss | `#44483C` | Recesses and subdued room accents |
+| Leaf green | `#526034` | Leaves and restrained plant accents |
+| Warm plaster | `#B6AD96` | Starting wall/paper colour under the key light |
+| Rice paper | `#F0EBDC` | Essential interface text |
+| Muted parchment | `#C5C0B2` | Supporting text on dark backing |
+| Tea gold | `#D8C497` | Keyboard focus, progress and key controls |
+| Infused tea | `#8D7940` | Starting liquid reference, reviewed inside the oatmeal cup |
 
-#### Kyūsu reference study — 2 November 2026
+The old `#AA795B` kyūsu and single-colour timber/ceramic swatches are superseded by the authored materials. Evaluate their screen appearance under runtime tone mapping and lights before changing textures.
 
-The three supplied photographs establish the kyūsu's specific direction, refining the earlier generic warm-clay proposal:
+**Remaining deliverable:** one sheet combining the authored material crops with these UI swatches and a guidance/focus sample over both a dark and a bright scene region. Essential text should reach 4.5:1 contrast and focus indicators 3:1 against adjacent colours; measure the composited backing rather than an isolated swatch. Pair state colours with labels or shape changes.
 
-- A squat, rounded body with a broad shoulder, restrained foot, and circular open interior.
-- Dark iron-brown, unglazed-looking clay with fine mineral speckling and subtle throwing marks.
-- A recessed, gently dished removable lid with a small upright knob, concentric rings near the knob, and a small pressure vent.
-- A short, upward-pointing tapered spout with a visible hollow mouth.
-- A side handle at roughly a right angle to the spout, narrow through the grip and flared at the end, with pale natural-fibre cord around the shaft.
+### 1.4 — Hand off the existing assets and specify the missing ones
 
-An initial editable Blender study and standalone GLB export now exist. See [the asset notes](assets/kyusu/README.md), [closed-lid preview](assets/kyusu/previews/kyusu-closed.png), and [open-lid preview](assets/kyusu/previews/kyusu-open.png). The study interprets the visible features; dimensions are inferred from photographs. It is not integrated into the ceremony, and its scale, poses, clearance, and runtime optimisation remain to be calibrated.
+| Asset | Existing dimensions / structure | Preserve and validate later | Status |
+| --- | --- | --- | --- |
+| Kyūsu | Squat body, hollow cavity/open spout, separate recessed lid, perpendicular flared cord-wrapped handle | Opening/spout/liquid/lid-seat anchors; receiving and pouring alignment; handle sweep and lid-rest clearance | Standalone source/GLB complete; integration pending |
+| Cup | About 59.9 mm high × 78.1 mm wide; approximately 178 ml brim capacity | Hollow interior, rounded lip, base/opening/liquid/sip anchors; provisional 151 ml liquid anchor leaves headroom and does not prescribe serving volume | Standalone source/GLB complete; integration and second variant pending |
+| Kettle | About 226 × 160 × 177.5 mm with handle upright; separate lid and hinged bail | Open steel cavity/spout, pointed pouring lip, lid seat and hinge axis; tilt, stream endpoint and overhead clearance | Standalone source/GLB complete; integration pending |
+| Tea box / caddy | About 90 mm diameter, 100 mm to opening, 126 mm overall; hollow body and separate lid group | Keep loop, disc, insert and seal together; opening/scoop-entry/lid-seat anchors; full scoop access | Standalone source/GLB complete; integration pending |
+| Table | About 1.60 × 0.849 m; surface 0.72 m above floor | Separate root/surface anchor; retain documented inferred legs, aprons and stretchers | Standalone source/GLB complete; integration pending |
+| Tray / pan | 0.84 × 0.44 × 0.036 m; independent pan, 0.20 m open study offset | Service/channel/pan anchors; spare lid positions; keep vessel feet off channel. Drainage is visual, with no fluid simulation | Standalone source/GLB complete; integration pending |
+| Scoop | Pale bamboo, shallow bowl and narrow handle; dimensions not established | Author a proportion study that enters the approximately 82 mm caddy opening and clears its rim; define bowl, grip and leaf attachment points | External study needed |
+| Room shell | Warm plaster/paper with dark timber frame; dimensions not established | Independent root, floor/origin, window reference; derive dimensions from seated camera and movement envelopes | Room study needed |
+| Plant | One muted green plant in a quiet container | Independent decorative root outside tea silhouettes and movement paths | Final external study needed |
 
-Reference filenames: `il_1588xN.8076310506_8lxw.webp` (underside/base and handle), `il_1588xN.8124230271_hmw0.webp` (open body and separate lid), and `il_1588xN.8124230291_9s4r.webp` (assembled three-quarter view). The photographs are visual references only and are not bundled into the runtime asset or used as textures.
+Keep Blender sources, asset-only GLBs, packed/baked PBR maps, named moving parts, semantic anchors, metadata and checked previews together. Use metres, +Z up in Blender and +Y up in GLB, with base-at-zero contact. Preserve existing node names; later manifest mappings can resolve differences between assets. Do not bake liquid, leaves, steam, input or ritual transitions into models.
 
-#### Cup reference study — 2 November 2026
+**Status:** written asset brief prepared in [docs/asset-brief.md](docs/asset-brief.md). Existing exports have standalone validation, not production performance acceptance. Set resource/texture budgets in roadmap 3.3 before expanding production.
 
-The supplied cup photographs and dimensions refine the earlier generic cream-ceramic direction:
+### 1.5 — Resolve the seated room composition and lighting
 
-- A handleless, softly rounded body, fullest around its middle, tapering inward toward a modest base and slightly inward toward the mouth.
-- Oatmeal ceramic glaze with fine brown mineral speckles and gentle colour variation.
-- A narrow iron-brown rim with a freckled transition into the lighter glaze, continuing around the open interior.
-- A rounded drinking lip, visible inner wall/floor, and shallow exposed-clay contact ring.
-- Nominal reference dimensions: 6 cm height and 180 ml capacity. The model measures approximately 59.9 mm high and 78.1 mm wide, with an estimated 178 ml brim capacity; exact replication is not required.
+Use the [furnishing study metadata](assets/room-setting/setting-metadata.json) as a scale reference. Its table-plus-tray surface is 0.756 m above the floor. Its four vessel bases are within 2 mm of the service surface and their static footprints pass service-zone checks. Those physical coordinates are not calibrated application positions.
 
-An editable Blender study, standalone GLB, construction script, and checked previews are available. See [the cup asset notes](assets/cup/README.md), [cup preview](assets/cup/previews/cup-hero.png), and [cup beside the kyūsu](assets/cup/previews/cup-with-kyusu.png). The comparison uses both models at their physical scale. A provisional liquid-surface anchor leaves headroom at approximately 151 ml; that is separate from nominal brim capacity. Liquid rendering and ceremony integration remain later work.
+Retain the arrangement: kettle left/rear, kyūsu near centre, cup right, caddy behind/within reach, scoop in an accessible clear service area. Reserve independent tea-box and kyūsu lid-rest footprints. Keep feet and scoop travel off the drainage channel.
 
-Reference filenames: `1451-1_c5212-b-800px.webp` (upright cup and interior), `1451-11_c5212-front.webp` (front silhouette, foot, and glaze), and `c5212-detail-1080px.webp` (rim and interior). The photographs are visual references only and are not packaged as textures or runtime assets.
+**Next study:** place the existing assets plus a scoop blockout in a simple room shell. Start with warm plaster/paper, dark timber framing and one diffused window upper-left/front. Add gentle fill and contact shadows. Keep the existing HDR provisional. Do not model more decoration until the working surface, dark vessels and guidance are readable.
 
-#### Kettle reference study — 3 November 2026
+Produce a paired contact sheet at **1440×900 desktop** and **390×844 portrait**, using the seated application camera as the starting point. Show entry, leaf transfer, water pour, tea pour, held-cup sip and completion. Mark the entry-copy area, lower guidance/progress area, controls, light direction, lid-rest areas and moving-object envelopes. Use pose blockouts where motion is not integrated; label them as such.
 
-The third study follows the supplied traditional Japanese kettle photographs and dimensions. This replaces the earlier aged-copper kettle proposal:
+Acceptance for this study:
 
-- A cylindrical, softly rounded stainless body with a sloping shoulder, circular opening, and charcoal exterior finish interpreted from the photographs.
-- A bright stainless inner wall/floor and thin exposed lip at the short, upward-curving open spout. The tip now has a shallow diagonal cut and pointed lower pouring lip, following the supplied annotated screenshots; see [the spout detail](assets/kettle/previews/kettle-spout-detail.png).
-- A removable shallow lid with a small pressure vent and tapered wooden knob.
-- An overhead steel bail handle, hinged at opposite sides, with two wooden grip halves and two visible silver rivets. The lid and handle have separate transform groups.
-- Reference dimensions: approximately 22 cm overall width, 16 cm body diameter, and 17.7 cm high with the handle upright. The study measures approximately 22.6 × 16.0 × 17.75 cm, including hinges and spout.
-- Material direction: the supplied 18-8 stainless-steel body reference, contrasting bare interior metal, and warm wood. The dark exterior is a visual finish interpretation; the exact coating is not specified.
+- All required objects and the current action remain visible at both aspect ratios.
+- Held-cup and pour poses leave guidance and controls unobscured.
+- Caddy/kyūsu lids clear the scoop and vessels; kettle bail and kyūsu handle clear the room and neighbouring objects throughout the proposed paths.
+- The cup retains oatmeal/rim detail; kyūsu reads dark iron-brown; kettle and caddy separate from the background; tray reflections do not dominate.
+- Reduced-motion presentation retains the same information without decorative motion.
 
-The editable Blender source, standalone GLB, construction script, and checked previews are available in [the kettle asset notes](assets/kettle/README.md). See [the assembled kettle](assets/kettle/previews/kettle-hero.png), [open lid and folded handle](assets/kettle/previews/kettle-open.png), [grip detail](assets/kettle/previews/kettle-grip-detail.png), and [all three studies at shared scale](assets/kettle/previews/kettle-with-teaware.png). Runtime movement, pour alignment, and performance acceptance remain to be calibrated in the application.
+**Status:** elevated furnishing study exists; seated room, portrait and ritual-pose contact sheets remain to be made. Actual motion and material/light acceptance follow after integration.
 
-Reference filenames: `Miyaco-Classic-Stainless-Steel-Kettle-1.5L-Made-in-Japan.webp` (assembled silhouette), `Miyaco-Classic-Stainless-Steel-Kettle-03.webp` (open interior and detached lid), and `Miyaco-Classic-Stainless-Steel-Kettle-05.webp` (wood grip, rivets, hinge, and knob). The photographs are not bundled into the model or used as textures.
+### 1.6 — Demonstrate the interface over this setting
 
-#### Tea-box reference study — completed 13 November 2026
+Retain Manrope for guidance/controls, Newsreader italic for entry/completion, and DM Mono for short labels/timers, with system fallbacks. Start essential guidance at 14–16 px and secondary labels at 12 px in the sample; check at both target viewports. Replace the prototype's faint 8–11 px guidance where it carries essential information.
 
-The supplied tea-box images replace the earlier moss-green, labelled caddy proposal with a plain charcoal container:
+Create three panels over the composition study:
 
-- A softly rounded cylinder, approximately 90 mm in diameter and 100 mm high to the opening, with a dark finely textured exterior and brown rim/interior.
-- A real hollow interior and floor, leaving clear access for the scoop.
-- A separate circular lift-off lid, an arched loop grip, and a pale underside sealing ring interpreted from the photographs. The exact body and sealing materials are not specified by the references.
-- Approximately 126 mm total height including the loop, proportioned to the existing cup and kyūsu.
+| State | Required content and treatment |
+| --- | --- |
+| Entry | Restrained brand, expressive title, short ritual description and explicit start action; clear keyboard focus |
+| Active ritual | Step label, action instruction, input hint and progress/timer on reliable dark backing; selected-object label and focus sample |
+| Completion | Quiet completion message and explicit restart action using the same type, backing, border and focus language |
 
-See [the tea-box asset notes](assets/teabox/README.md), [closed view](assets/teabox/previews/teabox-closed.png), and [open view](assets/teabox/previews/teabox-open.png). Source geometry, materials, lid hierarchy, and semantic anchors remain independent of ceremony input and scoop choreography.
+Use the UI colours from 1.3. Show the brightest background behind a panel as well as the darker tabletop case. Public copy describes the ritual rather than development phase numbers. Keep the current mark provisional until its meaning is verified; sound-control details remain with the sound phase.
 
-Reference filenames: `teabox 1.webp`, `teabox 2.webp`, and `teabox 3.webp`. Labels, rulers, loose leaves, watermarks, and background props are not part of the model. Photos remain outside the repository and are not used as texture pixels.
-
-#### Table and tray reference study — completed 13 November 2026
-
-The furniture follows the two supplied tea-table photographs, with dimensions inferred to support the existing tea ware:
-
-- A rustic plank timber table, approximately 1.60 × 0.85 m with its surface 0.72 m above the floor. Legs, aprons, and stretchers are inferred because the photographs do not show the full supporting structure.
-- A separate dark timber tray, approximately 0.84 × 0.44 m, with rounded edges and a low overall height of 36 mm. Its broad surface remains flat rather than having a raised perimeter rim.
-- An offset pale inlay along the long axis, with an adjacent recessed drainage channel.
-- A separate dark catch pan below the slab, with a named moving parent and a 0.20 m open reference offset. It is modelled as a removable visual part; functional fluid drainage is not implemented.
-- Separate table/tray roots and surface anchors allow the furniture to be replaced without owning the tea-object controllers. The main service area avoids the channel, with spare positions reserved for detached lids.
-
-See [the furniture asset notes](assets/table-tray/README.md), [table and tray preview](assets/table-tray/previews/table-and-tray.png), and [open catch-pan preview](assets/table-tray/previews/tray-pan-open.png). The photographs `table and tray.webp` and `table and tray 2.webp` guide the surfaces, proportions, inlay, channel, and pan. The pictured people, books, cups, and teapot are reference context rather than additional reconstructed assets.
-
-A [shared furnishing study](assets/room-setting/README.md) stages the table, tray, tea box, kettle, kyūsu, and cup at the same metre scale. Surface anchors determine placement, and static bounds are checked against the tray service area. This establishes a starting composition for the future room; guided movement clearance, responsive camera framing, walls, and final lighting still require implementation and review.
-
-Use subtle imperfections at the scale visible in normal play. Avoid oversized grain, heavy damage, bright metallic trim, or decorative details that obscure functional parts. Review the cup and kyūsu interiors early because the camera sees inside them.
-
-Design these as independent assets suitable for external authoring and later import. Keep room, table, tray, tea objects, and removable lids separately addressable. Detailed texture/export specifications and anchor calibration belong to the next implementation stages.
-
-Deliverable: one material and silhouette sheet with notes for each asset.
-
-### 1.5 — Establish room composition and lighting
-
-Keep the existing seated viewpoint and working arrangement as the starting composition. Position the kyūsu near the centre, cup to the visitor's right, kettle toward the left/rear, and caddy/scoop within clear reach. Preserve enough space for both pours, scoop travel, detached lids, and the cup's camera-relative sip pose.
-
-Use a diffused window as the apparent main light source, aligned with a soft warm light from the upper left/front. Maintain gentle fill so dark objects remain readable. Keep the brightest background region away from critical instructions and use contact shadows to ground each object. Treat the existing HDR as a temporary lighting reference to evaluate against the new room.
-
-Prepare composition studies for entry, preparation, pouring, sipping, and completion. Include desktop landscape and narrow portrait framing. Reserve quiet areas for the entry copy and lower guidance; ensure the held cup does not crowd the interface. Continue to respect reduced-motion preferences when presenting atmosphere.
-
-Deliverable: a desktop composition study and a portrait companion, with light direction and interface zones marked.
-
-### 1.6 — Align typography and interface treatment
-
-Retain the current type family roles as the starting point:
-
-- **Manrope:** instructions, controls, and general interface text.
-- **Newsreader italic:** expressive entry and completion moments.
-- **DM Mono:** short step labels, timers, and compact control hints.
-
-Keep essential instructions comfortably readable at supported viewport sizes; do not copy the prototype's smallest label sizes into the final direction without review. Use rice-paper text, tea-gold focus/emphasis, thin borders, and dark translucent surfaces with sufficient backing. Preserve visible keyboard focus and explicit action labels. Maintain system font fallbacks.
-
-Review the current brand mark as a provisional element. Use simple typography and a restrained mark; any culturally specific symbol or lettering should have a verified meaning before adoption. Public-facing labels should describe the ritual rather than development phase numbers. Audio control treatment can be finalised when sound functionality is implemented in its planned phase.
-
-Deliverable: a small interface style sample covering entry, current-step guidance, progress, focus, and completion.
+**Status:** prototype typography exists; these scene-backed, legible UI samples remain to be made.
 
 ### 1.7 — Review the direction and prepare the asset brief
 
-Bring the palette, materials, composition, and interface samples together into one reviewable scene study. Record decisions and any unresolved visual questions in this document. A static study can establish direction; final material and lighting acceptance must happen in the running scene after assets are integrated.
+The [asset brief](docs/asset-brief.md) records the current review and technical handoff. The built tea ware and furniture establish the baseline; their style does not need to be chosen again. Review the remaining room, scoop, lighting and UI decisions against that baseline.
 
 Completion checklist:
 
-- [ ] Direction statement and annotated reference board are complete.
-- [ ] Palette roles are clear, with readable text/focus combinations demonstrated.
-- [ ] Each tea object has a silhouette and material brief.
-- [ ] Room, table, tray, and decoration are defined as independent assets.
-- [ ] Desktop and portrait studies preserve object visibility and interface space.
-- [ ] Entry, active ritual, and completion share a consistent visual language.
-- [ ] Asset brief identifies separate lids, open interiors, and movement clearance needs.
-- [ ] The chosen direction and remaining questions are recorded before full asset production.
+- [x] Record the built material family and retire conflicting generic proposals.
+- [x] Identify existing sources, previews, dimensions, separate parts and anchors.
+- [x] Specify the missing scoop, room and decoration studies.
+- [x] Record open interiors, lid separation and movement-clearance requirements.
+- [ ] Assemble existing previews plus the selected room/scoop references into one annotated review sheet with source notes.
+- [ ] Demonstrate material/UI palette and measured text/focus contrast on scene backing.
+- [ ] Produce the paired seated desktop/portrait contact sheets specified in 1.5.
+- [ ] Show entry, active ritual and completion UI over the chosen setting.
+- [ ] Record the resulting room/light/UI decisions and carry unresolved runtime checks into integration.
+
+**Next concrete work:** make the room/scoop blockout and paired composition contact sheets, then add the UI/material review sheet. Phase 1 closes when those artifacts resolve the remaining design choices. It does not require final assets for the room/plant, calibrated animation, a new loader, or production performance certification.
+
+Carry the existing [Phase 2C focused browser verification gap](docs/phase-2c-qa.md) into the start of Phase 2. Final material, light and movement acceptance remains in the running scene after import.
 
 ## Phase 2 — Separate geometry from interaction behaviour
 
-This stage corresponds to step 3.2 of the broader visual identity roadmap. Its outcome is the existing procedural scene organised so a model can later be replaced without rewriting input, movement, or ceremony rules. Preserve the current appearance during this refactor; the Phase 1 palette remains a proposal for later visual work.
+This stage corresponds to step 3.2 of the broader visual identity roadmap. Its outcome is the existing procedural scene organised so a model can later be replaced without rewriting input, movement, or ceremony rules. Preserve the current appearance during this refactor; the authored material direction and Phase 1 UI targets are applied only in the later integration/visual passes.
 
 ### 2.1 — Record the baseline and ownership boundaries
 
