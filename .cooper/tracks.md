@@ -2,7 +2,7 @@
 
 ## Setup
 
-- [x] [Cooper framework initialization](active/cooper-setup/index.md) — approved setup; isolated worktree `.worktrees/cooper-setup`; implementation ready for review.
+- [x] [Cooper framework initialization](archive/cooper-setup/index.md) — completed setup; definitions, skills, and living specifications established.
 
 ## Product tracks
 
