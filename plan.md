@@ -1,6 +1,6 @@
 # OjaTea — Visual identity plan
 
-Updated: 1 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; implementation pending.
+Updated: 2 November 2026. Status: proposed visual direction and geometry/behaviour separation plan; standalone kyūsu and cup model studies created, application integration pending.
 
 ## Phase 1 — Define the visual direction and palette
 
@@ -68,14 +68,42 @@ Deliverable: a palette sheet showing colour roles, material samples, and legible
 
 | Asset | Proposed appearance | Functional visual requirement |
 | --- | --- | --- |
-| Kyūsu | Matte warm clay, subtle surface variation, dark interior | Side handle and spout read clearly; lid is a separate part; opening stays visible during leaf and water transfer |
-| Cup | Cream ceramic with a softly varied glaze and modest foot | Open interior, readable rim, visible tea surface, convincing close view during sipping |
+| Kyūsu | Reference-led squat body in dark iron-brown clay, recessed lid, short tapered spout, flared side handle wrapped in pale cord | Hollow body and open spout; removable lid with small knob/vent; side handle sits roughly perpendicular to the spout |
+| Cup | Rounded oatmeal glazed ceramic with fine mineral speckles, a narrow iron-brown rim, and a shallow exposed-clay foot | Approximately 6 cm tall / 180 ml brim capacity; hollow interior, rounded lip, and readable liquid surface; proportioned against the kyūsu |
 | Kettle | Restrained aged copper with a charcoal handle | Clear spout tip and grip; highlights reveal shape without overwhelming the cup and pot |
 | Caddy | Deep moss finish with a simple cream label | Lid/body separation and scoop entry are easy to read |
 | Scoop | Pale bamboo with fine directional grain | Bowl and handle remain distinct at the seated camera distance |
 | Table | Medium warm wood, low sheen, broad quiet grain | Supports clear object silhouettes and contact shadows |
 | Tray | Slightly lighter bamboo/wood than the table | Visible usable surface and enough space for detached lids and guided movement |
 | Room | Warm plaster/paper, darker timber framing, one restrained plant | Background depth and atmosphere while preserving clear views of the tea setting |
+
+#### Kyūsu reference study — 2 November 2026
+
+The three supplied photographs establish the kyūsu's specific direction, refining the earlier generic warm-clay proposal:
+
+- A squat, rounded body with a broad shoulder, restrained foot, and circular open interior.
+- Dark iron-brown, unglazed-looking clay with fine mineral speckling and subtle throwing marks.
+- A recessed, gently dished removable lid with a small upright knob, concentric rings near the knob, and a small pressure vent.
+- A short, upward-pointing tapered spout with a visible hollow mouth.
+- A side handle at roughly a right angle to the spout, narrow through the grip and flared at the end, with pale natural-fibre cord around the shaft.
+
+An initial editable Blender study and standalone GLB export now exist. See [the asset notes](assets/kyusu/README.md), [closed-lid preview](assets/kyusu/previews/kyusu-closed.png), and [open-lid preview](assets/kyusu/previews/kyusu-open.png). The study interprets the visible features; dimensions are inferred from photographs. It is not integrated into the ceremony, and its scale, poses, clearance, and runtime optimisation remain to be calibrated.
+
+Reference filenames: `il_1588xN.8076310506_8lxw.webp` (underside/base and handle), `il_1588xN.8124230271_hmw0.webp` (open body and separate lid), and `il_1588xN.8124230291_9s4r.webp` (assembled three-quarter view). The photographs are visual references only and are not bundled into the runtime asset or used as textures.
+
+#### Cup reference study — 2 November 2026
+
+The supplied cup photographs and dimensions refine the earlier generic cream-ceramic direction:
+
+- A handleless, softly rounded body, fullest around its middle, tapering inward toward a modest base and slightly inward toward the mouth.
+- Oatmeal ceramic glaze with fine brown mineral speckles and gentle colour variation.
+- A narrow iron-brown rim with a freckled transition into the lighter glaze, continuing around the open interior.
+- A rounded drinking lip, visible inner wall/floor, and shallow exposed-clay contact ring.
+- Nominal reference dimensions: 6 cm height and 180 ml capacity. The model measures approximately 59.9 mm high and 78.1 mm wide, with an estimated 178 ml brim capacity; exact replication is not required.
+
+An editable Blender study, standalone GLB, construction script, and checked previews are available. See [the cup asset notes](assets/cup/README.md), [cup preview](assets/cup/previews/cup-hero.png), and [cup beside the kyūsu](assets/cup/previews/cup-with-kyusu.png). The comparison uses both models at their physical scale. A provisional liquid-surface anchor leaves headroom at approximately 151 ml; that is separate from nominal brim capacity. Liquid rendering and ceremony integration remain later work.
+
+Reference filenames: `1451-1_c5212-b-800px.webp` (upright cup and interior), `1451-11_c5212-front.webp` (front silhouette, foot, and glaze), and `c5212-detail-1080px.webp` (rim and interior). The photographs are visual references only and are not packaged as textures or runtime assets.
 
 Use subtle imperfections at the scale visible in normal play. Avoid oversized grain, heavy damage, bright metallic trim, or decorative details that obscure functional parts. Review the cup and kyūsu interiors early because the camera sees inside them.
 

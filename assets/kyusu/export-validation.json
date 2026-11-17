@@ -1,0 +1,58 @@
+{
+  "glb_version": 2,
+  "bytes": 5311244,
+  "nodes": [
+    "anchor_base",
+    "anchor_grip",
+    "anchor_lid_seat",
+    "anchor_liquid_surface",
+    "anchor_opening",
+    "anchor_pour_pivot",
+    "anchor_spout_tip",
+    "kyusu_body",
+    "kyusu_handle_cord",
+    "kyusu_lid_disc",
+    "kyusu_lid_knob",
+    "kyusu_lid_throwing_ring_00",
+    "kyusu_lid_throwing_ring_01",
+    "kyusu_lid_throwing_ring_02",
+    "kyusu_lid_throwing_ring_03",
+    "kyusu_lid_throwing_ring_04",
+    "kyusu_lid",
+    "kyusu_side_handle",
+    "kyusu_root"
+  ],
+  "mesh_count": 10,
+  "embedded_images": 2,
+  "triangle_count": 72896,
+  "checks": "GLB header, anchors, lid hierarchy, embedded textures, normals/UVs, no studio objects passed",
+  "blender_roundtrip": {
+    "roundtrip_import": "passed",
+    "mesh_objects": 10,
+    "anchors": 7,
+    "images": [
+      {
+        "name": "clay_basecolor.002",
+        "packed_bytes": 1553544,
+        "pixel_count": 4194304,
+        "first_pixel": [
+          0.0784313753247261,
+          0.0313725508749485,
+          0.019607843831181526,
+          1.0
+        ]
+      },
+      {
+        "name": "clay_normal.001",
+        "packed_bytes": 1924798,
+        "pixel_count": 4194304,
+        "first_pixel": [
+          0.45098042488098145,
+          0.4901961088180542,
+          0.9960784912109375,
+          1.0
+        ]
+      }
+    ]
+  }
+}
